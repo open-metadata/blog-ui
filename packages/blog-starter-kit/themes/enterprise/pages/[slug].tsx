@@ -30,10 +30,10 @@ import {
 } from '../generated/graphql';
 // @ts-ignore
 import handleMathJax from '@starter-kit/utils/handle-math-jax';
+import { useEmbeds } from '@starter-kit/utils/renderer/hooks/useEmbeds';
 import { loadIframeResizer } from '@starter-kit/utils/renderer/services/embed';
 import { useEffect, useState } from 'react';
 // @ts-ignore
-import { useEmbeds } from '@starter-kit/utils/renderer/hooks/useEmbeds';
 import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
 
 const Subscribe = dynamic(() => import('../components/subscribe').then((mod) => mod.Subscribe));
