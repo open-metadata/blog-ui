@@ -1,5 +1,5 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PublicationNavbarItem } from '../generated/graphql';
 import { Button } from './button';
 import { Container } from './container';
@@ -21,13 +21,30 @@ export const Header = () => {
 	const navbarItems = publication.preferences.navbarItems.filter(hasUrl);
 	const visibleItems = navbarItems.slice(0, 3);
 	const hiddenItems = navbarItems.slice(3);
+	const [scrolledNav, setScrolledNav] = useState(false);
+
+	const changeBackground = () => {
+		if (window.scrollY >= 100) {
+			setScrolledNav(true);
+		} else {
+			setScrolledNav(false);
+		}
+	};
+
+	useEffect(function mount() {
+		window.addEventListener('scroll', changeBackground);
+
+		return function unMount() {
+			window.removeEventListener('scroll', changeBackground);
+		};
+	}, []);
 
 	const toggleSidebar = () => {
 		setIsSidebarVisible((prevVisibility) => !prevVisibility);
 	};
 
 	const navList = (
-		<ul className="flex flex-row items-center gap-2 text-white">
+		<ul className="flex flex-row items-center gap-2 text-black">
 			{visibleItems.map((item) => (
 				<li key={item.url}>
 					<a
@@ -77,7 +94,11 @@ export const Header = () => {
 	);
 
 	return (
-		<header className="border-b bg-slate-950 py-10 dark:border-neutral-800 dark:bg-neutral-900">
+		<header
+			className={`dark:bg-neutral-900" fixed top-0 z-50 w-full py-4 duration-300 ${
+				scrolledNav ? 'bg-white shadow-md' : 'bg-background'
+			}`}
+		>
 			<Container className="grid grid-cols-4 gap-5 px-5">
 				<div className="col-span-2 flex flex-1 flex-row items-center gap-2 lg:col-span-1">
 					<div className="lg:hidden">
@@ -85,7 +106,7 @@ export const Header = () => {
 							type="outline"
 							label=""
 							icon={<HamburgerSVG className="h-5 w-5 stroke-current" />}
-							className="rounded-xl border-transparent !px-3 !py-2 text-white hover:bg-slate-900 dark:hover:bg-neutral-800"
+							className="hover:bg-background rounded-xl border-transparent !px-3 !py-2 text-black"
 							onClick={toggleSidebar}
 						/>
 
@@ -99,10 +120,9 @@ export const Header = () => {
 				</div>
 				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
 					<nav className="hidden lg:block">{navList}</nav>
-					<Button href={baseUrl} as="a" type="primary" label="Book a demo" />
 				</div>
 			</Container>
-			<div className="mt-5 flex justify-center lg:hidden">
+			<div className="flex justify-center lg:hidden">
 				<PublicationLogo />
 			</div>
 		</header>
