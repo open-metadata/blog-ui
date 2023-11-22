@@ -30,11 +30,11 @@ import {
 } from '../generated/graphql';
 // @ts-ignore
 import handleMathJax from '@starter-kit/utils/handle-math-jax';
-import { useEffect, useState } from 'react';
 import { loadIframeResizer } from '@starter-kit/utils/renderer/services/embed';
+import { useEffect, useState } from 'react';
 // @ts-ignore
-import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
 import { useEmbeds } from '@starter-kit/utils/renderer/hooks/useEmbeds';
+import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
 
 const Subscribe = dynamic(() => import('../components/subscribe').then((mod) => mod.Subscribe));
 const PostComments = dynamic(() =>
@@ -72,25 +72,25 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 	useEmbeds({ enabled: canLoadEmbeds });
 	if (post.hasLatexInPost) {
 		setTimeout(() => {
-		  handleMathJax(true);
+			handleMathJax(true);
 		}, 500);
 	}
 
 	useEffect(() => {
 		if (screen.width <= 425) {
-		  setMobMount(true);
+			setMobMount(true);
 		}
-	
+
 		if (!post) {
-		  return;
+			return;
 		}
-	
+
 		// TODO:
 		// More of an alert, did this below to wrap async funcs inside useEffect
 		(async () => {
-		  await loadIframeResizer();
-		  triggerCustomWidgetEmbed(post.publication?.id.toString());
-		  setCanLoadEmbeds(true);
+			await loadIframeResizer();
+			triggerCustomWidgetEmbed(post.publication?.id.toString());
+			setCanLoadEmbeds(true);
 		})();
 	}, []);
 
@@ -140,7 +140,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 			{post.features.tableOfContents.isEnabled && <PostTOC />}
 			<MarkdownToHtml contentMarkdown={post.content.markdown} />
 			{(post.tags ?? []).length > 0 && (
-				<div className="mx-auto w-full px-5 text-slate-600 dark:text-neutral-300 md:max-w-screen-md">
+				<div className="mx-auto w-full max-w-screen-lg px-5 text-slate-600 dark:text-neutral-300">
 					<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
 				</div>
 			)}
@@ -171,7 +171,7 @@ export default function PostOrPage({ publication, post, page }: Props) {
 		<AppProvider publication={publication} post={post}>
 			<Layout>
 				<Header />
-				<Container className="pt-10">
+				<Container className="pt-24">
 					<article className="flex flex-col items-start gap-10 pb-10">
 						{post ? Post(publication, post) : Page(page)}
 					</article>
