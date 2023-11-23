@@ -17,3 +17,6 @@
 .text-footer {
 	color: hsla(0, 0%, 100%, 0.6);
 }
+.footer-social-icon {
+	@apply bg-slate-100;
+}

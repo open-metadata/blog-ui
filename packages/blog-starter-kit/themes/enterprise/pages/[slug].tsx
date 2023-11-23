@@ -35,6 +35,9 @@ import { loadIframeResizer } from '@starter-kit/utils/renderer/services/embed';
 import { useEffect, useState } from 'react';
 // @ts-ignore
 import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
+import { Avatar } from '../components/avatar';
+import { DateFormatter } from '../components/date-formatter';
+import { ReadTimeInMinutes } from '../components/post-read-time-in-minutes';
 
 const Subscribe = dynamic(() => import('../components/subscribe').then((mod) => mod.Subscribe));
 const PostComments = dynamic(() =>
@@ -130,22 +133,55 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				/>
 				<style dangerouslySetInnerHTML={{ __html: highlightJsMonokaiTheme }}></style>
 			</Head>
-			<PostHeader
-				title={post.title}
-				coverImage={post.coverImage?.url}
-				date={post.publishedAt}
-				author={post.author}
-				readTimeInMinutes={post.readTimeInMinutes}
-			/>
-			{post.features.tableOfContents.isEnabled && <PostTOC />}
-			<MarkdownToHtml contentMarkdown={post.content.markdown} />
-			{(post.tags ?? []).length > 0 && (
-				<div className="mx-auto w-full max-w-screen-lg px-5 text-slate-600 dark:text-neutral-300">
-					<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
+			<div className="grid grid-cols-6 pt-10 lg:pt-0">
+				<div className="col-span-full lg:col-span-4">
+					<PostHeader
+						title={post.title}
+						coverImage={post.coverImage?.url}
+						date={post.publishedAt}
+						author={post.author}
+						readTimeInMinutes={post.readTimeInMinutes}
+					/>
+
+					<MarkdownToHtml contentMarkdown={post.content.markdown} />
+					{(post.tags ?? []).length > 0 && (
+						<div className="text-slate-600 dark:text-neutral-300 lg:hidden">
+							<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
+						</div>
+					)}
+					{!post.preferences.disableComments && post.comments.totalDocuments > 0 && (
+						<PostComments />
+					)}
+					<Subscribe />
 				</div>
-			)}
-			{!post.preferences.disableComments && post.comments.totalDocuments > 0 && <PostComments />}
-			<Subscribe />
+				<div className="col-span-2 hidden lg:block">
+					<div className="mb-4 w-full px-5">
+						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50 md:text-lg">
+							<Avatar
+								username={post.author.username}
+								name={post.author.name}
+								size={8}
+								picture={post.author.profilePicture}
+							/>
+							<div className="mb-4 flex w-full flex-row flex-wrap  items-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0">
+								<DateFormatter dateString={post.publishedAt} />
+								{post.readTimeInMinutes && (
+									<span className="block font-bold text-slate-500">&middot;</span>
+								)}
+								<ReadTimeInMinutes readTimeInMinutes={post.readTimeInMinutes} />
+							</div>
+							{(post.tags ?? []).length > 0 && (
+								<div className="text-slate-600 dark:text-neutral-300">
+									<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
+								</div>
+							)}
+						</div>
+					</div>
+					<div className="sticky top-24">
+						{post.features.tableOfContents.isEnabled && <PostTOC />}
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };

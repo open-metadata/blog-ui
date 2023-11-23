@@ -16,11 +16,11 @@ type Props = {
 	readTimeInMinutes: number;
 };
 
-export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes }: Props) => {
+export const PostHeader = ({ title, coverImage, author, date, readTimeInMinutes }: Props) => {
 	return (
 		<>
-			<PostTitle>{title}</PostTitle>
-			<div className="flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0">
+			<PostTitle className="mb-3">{title}</PostTitle>
+			<div className="mb-3 flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0 lg:hidden">
 				<Avatar
 					username={author.username}
 					name={author.name}
