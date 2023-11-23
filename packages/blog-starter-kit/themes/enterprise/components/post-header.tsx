@@ -1,6 +1,9 @@
 import { resizeImage } from '@starter-kit/utils/image';
 import { User } from '../generated/graphql';
+import { Avatar } from './avatar';
 import { CoverImage } from './cover-image';
+import { DateFormatter } from './date-formatter';
+import { ReadTimeInMinutes } from './post-read-time-in-minutes';
 import { PostTitle } from './post-title';
 
 type Author = Pick<User, 'username' | 'name' | 'profilePicture'>;
@@ -13,10 +16,22 @@ type Props = {
 	readTimeInMinutes: number;
 };
 
-export const PostHeader = ({ title, coverImage }: Props) => {
+export const PostHeader = ({ title, coverImage, author, date, readTimeInMinutes }: Props) => {
 	return (
 		<>
-			<PostTitle className="mb-5">{title}</PostTitle>
+			<PostTitle className="mb-3">{title}</PostTitle>
+			<div className="mb-3 flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0 lg:hidden">
+				<Avatar
+					username={author.username}
+					name={author.name}
+					size={8}
+					picture={author.profilePicture}
+				/>
+				<span className="block font-bold text-slate-500">&middot;</span>
+				<DateFormatter dateString={date} />
+				{readTimeInMinutes && <span className="block font-bold text-slate-500">&middot;</span>}
+				<ReadTimeInMinutes readTimeInMinutes={readTimeInMinutes} />
+			</div>
 			{coverImage && (
 				<div className="mx-auto w-full max-w-screen-lg px-5">
 					<CoverImage

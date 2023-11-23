@@ -133,8 +133,8 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				/>
 				<style dangerouslySetInnerHTML={{ __html: highlightJsMonokaiTheme }}></style>
 			</Head>
-			<div className="grid grid-cols-6">
-				<div className="col-span-4">
+			<div className="grid grid-cols-6 pt-10 lg:pt-0">
+				<div className="col-span-full lg:col-span-4">
 					<PostHeader
 						title={post.title}
 						coverImage={post.coverImage?.url}
@@ -144,13 +144,17 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 					/>
 
 					<MarkdownToHtml contentMarkdown={post.content.markdown} />
-
+					{(post.tags ?? []).length > 0 && (
+						<div className="text-slate-600 dark:text-neutral-300 lg:hidden">
+							<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
+						</div>
+					)}
 					{!post.preferences.disableComments && post.comments.totalDocuments > 0 && (
 						<PostComments />
 					)}
 					<Subscribe />
 				</div>
-				<div className="col-span-2">
+				<div className="col-span-2 hidden lg:block">
 					<div className="mb-4 w-full px-5">
 						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50 md:text-lg">
 							<Avatar
