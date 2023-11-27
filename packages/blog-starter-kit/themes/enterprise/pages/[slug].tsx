@@ -13,7 +13,6 @@ import { Header } from '../components/header';
 import { Layout } from '../components/layout';
 import { MarkdownToHtml } from '../components/markdown-to-html';
 import { PostHeader } from '../components/post-header';
-import { PostTOC } from '../components/post-toc';
 import {
 	PageByPublicationDocument,
 	PageByPublicationQuery,
@@ -155,7 +154,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 					<Subscribe />
 				</div>
 				<div className="col-span-2 hidden lg:block">
-					<div className="mb-4 w-full px-5">
+					<div className="sticky top-24 mb-4 w-full px-5">
 						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50 md:text-lg">
 							<Avatar
 								username={post.author.username}
@@ -176,9 +175,6 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 								</div>
 							)}
 						</div>
-					</div>
-					<div className="sticky top-24">
-						{post.features.tableOfContents.isEnabled && <PostTOC />}
 					</div>
 				</div>
 			</div>
