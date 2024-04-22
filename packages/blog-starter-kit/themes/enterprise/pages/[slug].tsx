@@ -38,7 +38,6 @@ import { Avatar } from '../components/avatar';
 import { DateFormatter } from '../components/date-formatter';
 import { ReadTimeInMinutes } from '../components/post-read-time-in-minutes';
 
-const Subscribe = dynamic(() => import('../components/subscribe').then((mod) => mod.Subscribe));
 const PostComments = dynamic(() =>
 	import('../components/post-comments').then((mod) => mod.PostComments),
 );
@@ -151,7 +150,6 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 					{!post.preferences.disableComments && post.comments.totalDocuments > 0 && (
 						<PostComments />
 					)}
-					<Subscribe />
 				</div>
 				<div className="col-span-2 hidden lg:block">
 					<div className="sticky top-24 mb-4 w-full px-5">
