@@ -34,6 +34,7 @@ import { loadIframeResizer } from '@starter-kit/utils/renderer/services/embed';
 import { useEffect, useState } from 'react';
 // @ts-ignore
 import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
+import { useRouter } from 'next/router';
 import { Avatar } from '../components/avatar';
 import { DateFormatter } from '../components/date-formatter';
 import { ReadTimeInMinutes } from '../components/post-read-time-in-minutes';
@@ -70,6 +71,9 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 	));
 	const [, setMobMount] = useState(false);
 	const [canLoadEmbeds, setCanLoadEmbeds] = useState(false);
+
+	const router = useRouter();
+
 	useEmbeds({ enabled: canLoadEmbeds });
 	if (post.hasLatexInPost) {
 		setTimeout(() => {
@@ -133,6 +137,28 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 			</Head>
 			<div className="grid grid-cols-6 pt-10 lg:pt-0">
 				<div className="col-span-full lg:col-span-4">
+					<div
+						className="mb-2 flex cursor-pointer items-center gap-2"
+						onClick={() => router.back()}
+					>
+						<span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={2}
+								stroke="currentColor"
+								className="h-4 w-4"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+								/>
+							</svg>
+						</span>
+						<span>Back</span>
+					</div>
 					<PostHeader
 						title={post.title}
 						coverImage={post.coverImage?.url}
@@ -140,7 +166,6 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 						author={post.author}
 						readTimeInMinutes={post.readTimeInMinutes}
 					/>
-
 					<MarkdownToHtml contentMarkdown={post.content.markdown} />
 					{(post.tags ?? []).length > 0 && (
 						<div className="text-slate-600 dark:text-neutral-300 lg:hidden">
