@@ -98,7 +98,7 @@ export const Header = () => {
 				scrolledNav ? 'bg-white shadow-md' : 'bg-white'
 			}`}
 		>
-			<div className="grid grid-cols-4 gap-5 px-7">
+			<div className="collate-container mx-auto grid grid-cols-4 gap-5 px-7">
 				<div className="col-span-2 flex flex-1 flex-row items-center gap-2 lg:col-span-1">
 					<div className="lg:block">
 						<PublicationLogo />

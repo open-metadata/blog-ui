@@ -20,3 +20,33 @@
 .footer-social-icon {
 	@apply bg-slate-100;
 }
+
+.collate-container {
+	width: 100%;
+}
+@media (min-width: 640px) {
+	.collate-container {
+		max-width: 640px;
+	}
+}
+@media (min-width: 768px) {
+	.collate-container {
+		max-width: 768px;
+	}
+}
+@media (min-width: 1024px) {
+	.collate-container {
+		max-width: 1024px;
+	}
+}
+@media (min-width: 1280px) {
+	.collate-container {
+		max-width: 1440px;
+	}
+}
+
+@media (min-width: 1536px) {
+	.collate-container {
+		max-width: 1536px;
+	}
+}
