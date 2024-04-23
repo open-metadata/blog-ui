@@ -77,13 +77,13 @@ function PublicationSidebar(props: Props) {
 								))}
 								<li className="py-3">
 									<a
-										target="_blank"
+										target="_self"
 										rel="noopener noreferrer"
-										className="bg-link hover:bg-secondary rounded-full px-5 py-3 text-base font-medium text-white duration-200 lg:px-0"
+										className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
 										aria-label="signup to getCollate"
-										href="https://cloud.getcollate.io/signup"
+										href="https://www.getcollate.io/book-demo"
 									>
-										<span className="lg:mx-6">Sign up</span>
+										<span className="lg:mx-6">Book Demo</span>
 									</a>
 								</li>
 							</ul>

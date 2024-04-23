@@ -24,7 +24,7 @@ export const NAV_LINKS = [
 		url: 'https://www.getcollate.io/about',
 	},
 	{
-		label: 'Contact',
+		label: 'Contact Us',
 		url: 'https://www.getcollate.io/contact',
 	},
 ];
@@ -63,14 +63,14 @@ export const Header = () => {
 	};
 
 	const navList = (
-		<ul className="flex flex-row items-center gap-2 text-black">
+		<ul className="flex flex-row items-center gap-6 text-[#162044]">
 			{NAV_LINKS.map((item) => (
 				<li key={item.url}>
 					<a
 						href={item.url}
 						target="_self"
 						rel="noopener noreferrer"
-						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap p-2 font-medium ${
+						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap p-2 text-[16px] font-semibold ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''
 						}`}
 					>
@@ -82,9 +82,9 @@ export const Header = () => {
 				<a
 					target="_self"
 					rel="noopener noreferrer"
-					className="bg-secondary rounded-full px-5 py-3 text-base font-medium text-white duration-200 lg:px-0"
+					className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
 					aria-label="signup to getCollate"
-					href="https://cloud.getcollate.io/signup"
+					href="https://www.getcollate.io/book-demo"
 				>
 					<span className="lg:mx-6">Book Demo</span>
 				</a>
@@ -94,13 +94,19 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`dark:bg-neutral-900" border-b-[rgb(229, 231, 235)] fixed top-0 z-50 w-full border-b py-4 duration-300 ${
-				scrolledNav ? 'bg-white shadow-md' : 'bg-background'
+			className={`dark:bg-neutral-900" border-b-[rgb(229, 231, 235)] fixed top-0 z-50 w-full border-b py-3 duration-300 ${
+				scrolledNav ? 'bg-white shadow-md' : 'bg-white'
 			}`}
 		>
-			<div className="grid grid-cols-4 gap-5 px-5">
+			<div className="grid grid-cols-4 gap-5 px-6">
 				<div className="col-span-2 flex flex-1 flex-row items-center gap-2 lg:col-span-1">
-					<div className="lg:hidden">
+					<div className="lg:block">
+						<PublicationLogo />
+					</div>
+				</div>
+				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
+					<nav className="hidden lg:block">{navList}</nav>
+					<div className="justify-end lg:hidden">
 						<Button
 							type="outline"
 							label=""
@@ -113,16 +119,7 @@ export const Header = () => {
 							<PublicationSidebar navbarItems={NAV_LINKS} toggleSidebar={toggleSidebar} />
 						)}
 					</div>
-					<div className="hidden lg:block">
-						<PublicationLogo />
-					</div>
 				</div>
-				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
-					<nav className="hidden lg:block">{navList}</nav>
-				</div>
-			</div>
-			<div className="flex justify-center lg:hidden">
-				<PublicationLogo />
 			</div>
 		</header>
 	);
