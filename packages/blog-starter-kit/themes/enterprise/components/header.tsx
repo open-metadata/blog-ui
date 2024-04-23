@@ -68,7 +68,7 @@ export const Header = () => {
 				<li key={item.url}>
 					<a
 						href={item.url}
-						target={item.url === 'https://blog.getcollate.io/' ? '_self' : '_blank'}
+						target="_self"
 						rel="noopener noreferrer"
 						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap p-2 font-medium ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''
@@ -80,7 +80,7 @@ export const Header = () => {
 			))}
 			<li className="px-3">
 				<a
-					target="_blank"
+					target="_self"
 					rel="noopener noreferrer"
 					className="bg-secondary rounded-full px-5 py-3 text-base font-medium text-white duration-200 lg:px-0"
 					aria-label="signup to getCollate"
