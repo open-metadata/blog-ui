@@ -63,14 +63,14 @@ export const Header = () => {
 	};
 
 	const navList = (
-		<ul className="flex flex-row items-center gap-6 text-[#162044]">
+		<ul className="flex flex-row items-center gap-10 text-[#162044]">
 			{NAV_LINKS.map((item) => (
 				<li key={item.url}>
 					<a
 						href={item.url}
 						target="_self"
 						rel="noopener noreferrer"
-						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap p-2 text-[16px] font-semibold ${
+						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap text-[16px] font-medium ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''
 						}`}
 					>
@@ -82,11 +82,11 @@ export const Header = () => {
 				<a
 					target="_self"
 					rel="noopener noreferrer"
-					className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
+					className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200"
 					aria-label="signup to getCollate"
 					href="https://www.getcollate.io/book-demo"
 				>
-					<span className="lg:mx-6">Book Demo</span>
+					<span className="font-medium lg:mx-6">Book a Demo</span>
 				</a>
 			</li>
 		</ul>
@@ -94,7 +94,7 @@ export const Header = () => {
 
 	return (
 		<header
-			className={`dark:bg-neutral-900" border-b-[rgb(229, 231, 235)] fixed top-0 z-50 w-full border-b py-3 duration-300 ${
+			className={`dark:bg-neutral-900" border-b-[rgb(229, 231, 235)] fixed top-0 z-50 h-16 w-full border-b py-4 duration-300 ${
 				scrolledNav ? 'bg-white shadow-md' : 'bg-white'
 			}`}
 		>

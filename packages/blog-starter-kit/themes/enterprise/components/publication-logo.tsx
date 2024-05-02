@@ -23,7 +23,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 				{PUBLICATION_LOGO ? (
 					<>
 						<img
-							className="block w-32 shrink-0 md:w-40"
+							className="block h-[32px] w-auto shrink-0 cursor-pointer"
 							alt={publication.title}
 							src="https://www.getcollate.io/images/logo.svg"
 						/>

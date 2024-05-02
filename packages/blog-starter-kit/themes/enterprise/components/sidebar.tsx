@@ -83,7 +83,7 @@ function PublicationSidebar(props: Props) {
 										aria-label="signup to getCollate"
 										href="https://www.getcollate.io/book-demo"
 									>
-										<span className="lg:mx-6">Book Demo</span>
+										<span className="font-medium lg:mx-6">Book a Demo</span>
 									</a>
 								</li>
 							</ul>
