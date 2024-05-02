@@ -52,7 +52,7 @@ export const SubscribeForm = () => {
 					<button
 						disabled={requestInProgress}
 						onClick={subscribe}
-						className="bg-link dark:bg-link absolute right-3 top-3 rounded-full px-3 py-2 text-white disabled:cursor-not-allowed disabled:opacity-80"
+						className="bg-secondary dark:bg-secondary absolute right-3 top-3 rounded-full px-4 py-2 text-[16px] font-medium text-white disabled:cursor-not-allowed disabled:opacity-80"
 					>
 						Subscribe
 					</button>
