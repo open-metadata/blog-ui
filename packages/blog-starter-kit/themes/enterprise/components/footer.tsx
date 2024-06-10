@@ -70,7 +70,7 @@ export const Footer = () => {
 										className="hover:underline"
 										target="_blank"
 									>
-										Contact
+										Contact Us
 									</a>
 								</li>
 							</ul>
