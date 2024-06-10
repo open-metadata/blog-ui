@@ -38,38 +38,22 @@ export const Footer = () => {
 							<p className="text-footer mb-2 font-semibold dark:text-neutral-200">Company</p>
 							<ul className="text-footer flex flex-col gap-1 dark:text-neutral-300">
 								<li>
-									<a
-										href="https://www.getcollate.io/pricing"
-										className="hover:underline"
-										target="_blank"
-									>
+									<a href="https://www.getcollate.io/pricing" className="hover:underline">
 										Pricing
 									</a>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/careers"
-										className="hover:underline"
-										target="_blank"
-									>
+									<a href="https://www.getcollate.io/careers" className="hover:underline">
 										Careers
 									</a>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/about"
-										className="hover:underline"
-										target="_blank"
-									>
+									<a href="https://www.getcollate.io/about" className="hover:underline">
 										About
 									</a>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/contact"
-										className="hover:underline"
-										target="_blank"
-									>
+									<a href="https://www.getcollate.io/contact" className="hover:underline">
 										Contact Us
 									</a>
 								</li>

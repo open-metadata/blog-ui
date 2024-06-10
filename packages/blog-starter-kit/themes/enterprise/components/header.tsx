@@ -10,22 +10,27 @@ export const NAV_LINKS = [
 	{
 		label: 'Pricing',
 		url: 'https://www.getcollate.io/pricing',
+		id: 'pricing',
 	},
 	{
 		label: 'Blog',
 		url: 'https://blog.getcollate.io/',
+		id: 'blog',
 	},
 	{
 		label: 'Careers',
 		url: 'https://www.getcollate.io/careers',
+		id: 'careers',
 	},
 	{
 		label: 'About',
 		url: 'https://www.getcollate.io/about',
+		id: 'about',
 	},
 	{
 		label: 'Book a Demo',
 		url: 'https://www.getcollate.io/book-demo',
+		id: 'book-a-demo',
 	},
 ];
 
@@ -67,6 +72,7 @@ export const Header = () => {
 			{NAV_LINKS.map((item) => (
 				<li key={item.url}>
 					<a
+						id={item.id}
 						href={item.url}
 						target="_self"
 						rel="noopener noreferrer"
