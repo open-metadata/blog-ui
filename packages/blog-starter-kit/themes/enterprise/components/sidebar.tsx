@@ -82,7 +82,7 @@ function PublicationSidebar(props: Props) {
 										rel="noopener noreferrer"
 										className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
 										aria-label="signup to getCollate"
-										href="https://cloud.getcollate.io/singup"
+										href="https://cloud.getcollate.io/signup"
 									>
 										<span className="font-medium lg:mx-6">Get Collate Free</span>
 									</a>
