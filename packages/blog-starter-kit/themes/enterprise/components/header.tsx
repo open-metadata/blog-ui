@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PublicationNavbarItem } from '../generated/graphql';
+import BookDemoDropDown from './book-demo-dropdown';
 import { Button } from './button';
 import { useAppContext } from './contexts/appContext';
 import HamburgerSVG from './icons/svgs/HamburgerSVG';
@@ -26,11 +27,6 @@ export const NAV_LINKS = [
 		label: 'About',
 		url: 'https://www.getcollate.io/about',
 		id: 'about',
-	},
-	{
-		label: 'Book a Demo',
-		url: 'https://www.getcollate.io/book-demo',
-		id: 'book-a-demo',
 	},
 ];
 
@@ -84,6 +80,7 @@ export const Header = () => {
 					</a>
 				</li>
 			))}
+			<BookDemoDropDown />
 			<li>
 				<a
 					id="get-collate-free-button-navbar--blog"

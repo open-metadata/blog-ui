@@ -1,6 +1,7 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import BookDemoDropDown from './book-demo-dropdown';
 import { Button } from './button';
 import { useAppContext } from './contexts/appContext';
 import CloseSVG from './icons/svgs/CloseSVG';
@@ -75,6 +76,7 @@ function PublicationSidebar(props: Props) {
 										</Link>
 									</li>
 								))}
+								<BookDemoDropDown isSidebar />
 								<li className="py-3">
 									<a
 										id="get-collate-free-button-navbar--blog"
