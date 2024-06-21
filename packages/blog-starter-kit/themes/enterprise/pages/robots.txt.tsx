@@ -9,7 +9,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		throw new Error('Could not determine host');
 	}
 
-	const sitemapUrl = `https://${host}/sitemap.xml`;
+	const sitemapUrl = `https://blog.getcollate.io/sitemap.xml`;
 	const robotsTxt = `
 User-agent: *
 Allow: /
