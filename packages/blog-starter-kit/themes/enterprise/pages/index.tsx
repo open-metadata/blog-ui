@@ -88,6 +88,8 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 					<title>
 						{publication.displayTitle || publication.title || 'Hashnode Blog Starter Kit'}
 					</title>
+					{/* canonical url */}
+					<link rel="canonical" href="https://blog.getcollate.io" />
 					<meta
 						name="description"
 						content={
