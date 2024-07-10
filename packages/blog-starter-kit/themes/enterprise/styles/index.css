@@ -18,7 +18,7 @@
 }
 
 .bg-dark-background {
-	background: #202832;
+	background: #292e4e;
 }
 
 .text-footer {
@@ -56,4 +56,12 @@
 	.collate-container {
 		max-width: 1536px;
 	}
+}
+
+.font-inter {
+	font-family: Inter;
+}
+
+.footer-link {
+	@apply hover:text-secondary font-inter text-base font-normal text-[#ffffff99] duration-300;
 }
