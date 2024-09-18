@@ -9,6 +9,11 @@ import PublicationSidebar from './sidebar';
 
 export const NAV_LINKS = [
 	{
+		label: 'Product',
+		url: 'https://www.getcollate.io/product',
+		id: 'product',
+	},
+	{
 		label: 'Pricing',
 		url: 'https://www.getcollate.io/pricing',
 		id: 'pricing',
@@ -27,6 +32,12 @@ export const NAV_LINKS = [
 		label: 'About',
 		url: 'https://www.getcollate.io/about',
 		id: 'about',
+	},
+	{
+		label: 'Documentation',
+		url: 'https://docs.getcollate.io/',
+		id: 'documentation',
+		isExternalLink: true,
 	},
 ];
 
@@ -70,7 +81,7 @@ export const Header = () => {
 					<a
 						id={item.id}
 						href={item.url}
-						target="_self"
+						target={item?.isExternalLink ? '_blank' : '_self'}
 						rel="noopener noreferrer"
 						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap text-[16px] font-medium ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''

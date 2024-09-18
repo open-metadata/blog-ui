@@ -92,6 +92,14 @@ export const Footer = () => {
 							<ul className="text-footer flex flex-col gap-4 pt-5 dark:text-neutral-300">
 								<li>
 									<a
+										href="https://www.getcollate.io/product"
+										className="footer-link hover:underline"
+									>
+										Product
+									</a>
+								</li>
+								<li>
+									<a
 										href="https://www.getcollate.io/pricing"
 										className="footer-link hover:underline"
 									>
@@ -166,6 +174,15 @@ export const Footer = () => {
 										target="_blank"
 									>
 										Roadmap
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://docs.getcollate.io"
+										className="footer-link hover:underline"
+										target="_blank"
+									>
+										Documentation
 									</a>
 								</li>
 							</ul>
