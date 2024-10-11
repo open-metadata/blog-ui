@@ -107,16 +107,16 @@ export const Footer = () => {
 									</a>
 								</li>
 								<li>
+									<a href="https://blog.getcollate.io" className="footer-link hover:underline">
+										Blog
+									</a>
+								</li>
+								<li>
 									<a
 										href="https://www.getcollate.io/careers"
 										className="footer-link hover:underline"
 									>
 										Career
-									</a>
-								</li>
-								<li>
-									<a href="https://www.getcollate.io/about" className="footer-link hover:underline">
-										About
 									</a>
 								</li>
 								<li>

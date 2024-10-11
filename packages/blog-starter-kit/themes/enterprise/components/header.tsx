@@ -29,15 +29,15 @@ export const NAV_LINKS = [
 		id: 'careers',
 	},
 	{
-		label: 'About',
-		url: 'https://www.getcollate.io/about',
-		id: 'about',
+		label: 'Docs',
+		url: 'https://docs.getcollate.io/',
+		id: 'docs',
+		isExternalLink: true,
 	},
 	{
-		label: 'Documentation',
-		url: 'https://docs.getcollate.io/',
-		id: 'documentation',
-		isExternalLink: true,
+		label: 'Contact Us',
+		url: 'https://www.getcollate.io/contact',
+		id: 'contact-us',
 	},
 ];
 
