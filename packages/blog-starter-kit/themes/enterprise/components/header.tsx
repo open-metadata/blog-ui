@@ -24,11 +24,6 @@ export const NAV_LINKS = [
 		id: 'blog',
 	},
 	{
-		label: 'Careers',
-		url: 'https://www.getcollate.io/careers',
-		id: 'careers',
-	},
-	{
 		label: 'Docs',
 		url: 'https://docs.getcollate.io/',
 		id: 'docs',
