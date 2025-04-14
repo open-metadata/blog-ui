@@ -5,12 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	font-family: 'DM Sans';
-}
-
-
-
 .bg-background {
 	background: #f7fafc;
 }
