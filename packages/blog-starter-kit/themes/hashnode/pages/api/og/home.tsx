@@ -7,34 +7,11 @@ export const config = {
 	runtime: 'edge',
 };
 
-const fontRegular = fetch(
-	new URL('../../../assets/PlusJakartaSans-Regular.ttf', import.meta.url),
-).then((res) => res.arrayBuffer());
-
-const fontMedium = fetch(
-	new URL('../../../assets/PlusJakartaSans-Medium.ttf', import.meta.url),
-).then((res) => res.arrayBuffer());
-
-const fontSemiBold = fetch(
-	new URL('../../../assets/PlusJakartaSans-SemiBold.ttf', import.meta.url),
-).then((res) => res.arrayBuffer());
-
-const fontBold = fetch(new URL('../../../assets/PlusJakartaSans-Bold.ttf', import.meta.url)).then(
-	(res) => res.arrayBuffer(),
-);
-
-const fontExtraBold = fetch(
-	new URL('../../../assets/PlusJakartaSans-ExtraBold.ttf', import.meta.url),
-).then((res) => res.arrayBuffer());
-
 const kFormatter = (num: number) => {
 	return num > 999 ? `${(num / 1000).toFixed(1)}K` : num;
 };
 
 export default async function handler(req: NextRequest) {
-	const [fontDataRegular, fontDataMedium, fontDataSemiBold, fontDataBold, fontDataExtraBold] =
-		await Promise.all([fontRegular, fontMedium, fontSemiBold, fontBold, fontExtraBold]);
-
 	const { searchParams } = new URL(req.url);
 
 	const ogData = JSON.parse(atob(searchParams.get('og') as string));
@@ -62,12 +39,7 @@ export default async function handler(req: NextRequest) {
 
 	return new ImageResponse(
 		(
-			<div
-				style={{
-					fontFamily: '"Plus Jakarta Sans"',
-				}}
-				tw={`relative flex h-full w-full p-8 bg-white`}
-			>
+			<div tw={`relative flex h-full w-full p-8 bg-white`}>
 				{/* PERSONAL BLOG The following parent div is for personal blogs */}
 				{/* if the site is set to open in dark mode by default, change text-black to text-white and bg-white to bg-black */}
 				{!isTeam && (
@@ -189,38 +161,6 @@ export default async function handler(req: NextRequest) {
 		{
 			width: 1200,
 			height: 630,
-			fonts: [
-				{
-					name: 'Typewriter',
-					data: fontDataRegular,
-					style: 'normal',
-					weight: 400,
-				},
-				{
-					name: 'Typewriter',
-					data: fontDataMedium,
-					style: 'normal',
-					weight: 500,
-				},
-				{
-					name: 'Typewriter',
-					data: fontDataSemiBold,
-					style: 'normal',
-					weight: 600,
-				},
-				{
-					name: 'Typewriter',
-					data: fontDataBold,
-					style: 'normal',
-					weight: 700,
-				},
-				{
-					name: 'Typewriter',
-					data: fontDataExtraBold,
-					style: 'normal',
-					weight: 800,
-				},
-			],
 		},
 	);
 }
