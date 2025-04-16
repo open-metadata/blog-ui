@@ -1,11 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const fontInterVar = 'var(--font-inter)';
+const fontPlusJakartaVar = 'var(--font-plus-jakarta-sans)';
 
 module.exports = {
 	content: ['./components/**/*.tsx', './pages/**/*.tsx'],
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: [fontInterVar, ...defaultTheme.fontFamily.sans],
+				heading: [fontPlusJakartaVar, ...defaultTheme.fontFamily.sans],
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -43,6 +51,24 @@ module.exports = {
 							'align-items': 'center',
 							'font-size': '1rem',
 						},
+						h1: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h2: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h3: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h4: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h5: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h6: {
+							fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
 					},
 				},
 			}),
