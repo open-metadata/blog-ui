@@ -1,12 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const fontInterVar = 'var(--font-inter)';
+const fontPlusJakartaVar = 'var(--font-plus-jakarta-sans)';
 
 module.exports = {
 	content: ['./components/**/*.tsx', './pages/**/*.tsx', './components/*.js'],
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: [fontInterVar, ...defaultTheme.fontFamily.sans],
+				heading: [fontPlusJakartaVar, ...defaultTheme.fontFamily.sans],
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -126,6 +134,24 @@ module.exports = {
 					},
 					'blockquote p:last-of-type::after': {
 					  content: '""',
+					},
+					h1: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+					},
+					h2: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+					},
+					h3: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+					},
+					h4: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+					},
+					h5: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
+					},
+					h6: {
+					  fontFamily: `${[fontPlusJakartaVar, ...defaultTheme.fontFamily.sans]}`,
 					},
 					td: {
 					  border: '1px solid rgb(226 232 240 / 80%)',
