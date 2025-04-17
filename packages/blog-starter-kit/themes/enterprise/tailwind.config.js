@@ -1,11 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const fontInterVar = 'var(--font-inter)';
+const fontSuisseIntlVar = 'var(--font-suisse-intl)';
 
 module.exports = {
 	content: ['./components/**/*.tsx', './pages/**/*.tsx'],
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: [fontInterVar, ...defaultTheme.fontFamily.sans],
+				heading: [fontSuisseIntlVar, ...defaultTheme.fontFamily.sans],
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -43,6 +51,25 @@ module.exports = {
 							'align-items': 'center',
 							'font-size': '1rem',
 						},
+						h1: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+							fontWeight: 700,
+						  },
+						  h2: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h3: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h4: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h5: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
+						  h6: {
+							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+						  },
 					},
 				},
 			}),
