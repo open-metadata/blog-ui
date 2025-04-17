@@ -15,10 +15,6 @@ const fontMedium = fetch(
 	new URL('../../../assets/SuisseIntl-Medium.woff', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-const fontLight = fetch(
-	new URL('../../../assets/SuisseIntl-Light.woff', import.meta.url),
-).then((res) => res.arrayBuffer());
-
 const fontBold = fetch(new URL('../../../assets/SuisseIntl-Bold.woff', import.meta.url)).then(
 	(res) => res.arrayBuffer(),
 );
@@ -28,8 +24,8 @@ const fontSemiBold = fetch(new URL('../../../assets/SuisseIntl-SemiBold.woff', i
 );
 
 export default async function handler(req: NextRequest) {
-	const [fontDataRegular, fontDataMedium, fontDataLight, fontDataBold, fontDataSemiBold] =
-		await Promise.all([fontRegular, fontMedium, fontLight, fontBold, fontSemiBold]);
+	const [fontDataRegular, fontDataMedium, fontDataBold, fontDataSemiBold] =
+		await Promise.all([fontRegular, fontMedium, fontBold, fontSemiBold]);
 
 	const { searchParams } = new URL(req.url);
 
@@ -171,12 +167,6 @@ export default async function handler(req: NextRequest) {
 					data: fontDataMedium,
 					style: 'normal',
 					weight: 500,
-				},
-				{
-					name: 'Typewriter',
-					data: fontDataLight,
-					style: 'normal',
-					weight: 300,
 				},
 				{
 					name: 'Typewriter',

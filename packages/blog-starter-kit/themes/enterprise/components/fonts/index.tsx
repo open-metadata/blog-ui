@@ -20,11 +20,6 @@ const suisseIntl = localFont({
         style: 'normal',
       },
       {
-        path: '../../assets/SuisseIntl-Light.woff',
-        weight: '300',
-        style: 'normal',
-      },
-      {
         path: '../../assets/SuisseIntl-Medium.woff',
         weight: '500',
         style: 'normal',
