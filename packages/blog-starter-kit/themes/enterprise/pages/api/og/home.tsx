@@ -8,18 +8,21 @@ export const config = {
 };
 
 const fontRegular = fetch(
-	new URL('../../../assets/SuisseIntl-Regular.ttf', import.meta.url),
+	new URL('../../../assets/SuisseIntl-Regular.woff', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const fontMedium = fetch(
-	new URL('../../../assets/SuisseIntl-Medium.ttf', import.meta.url),
+	new URL('../../../assets/SuisseIntl-Medium.woff', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const fontLight = fetch(
-	new URL('../../../assets/SuisseIntl-Light.ttf', import.meta.url),
+	new URL('../../../assets/SuisseIntl-Light.woff', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-const fontBold = fetch(new URL('../../../assets/SuisseIntl-Bold.ttf', import.meta.url)).then(
+const fontBold = fetch(new URL('../../../assets/SuisseIntl-Bold.woff', import.meta.url)).then(
+	(res) => res.arrayBuffer(),
+);
+const fontSemiBold = fetch(new URL('../../../assets/SuisseIntl-SemiBold.woff', import.meta.url)).then(
 	(res) => res.arrayBuffer(),
 );
 
@@ -28,8 +31,8 @@ const kFormatter = (num: number) => {
 };
 
 export default async function handler(req: NextRequest) {
-	const [fontDataRegular, fontDataMedium, fontDataLight, fontDataBold] =
-		await Promise.all([fontRegular, fontMedium, fontLight, fontBold]);
+	const [fontDataRegular, fontDataMedium, fontDataLight, fontDataBold, fontDataSemiBold] =
+		await Promise.all([fontRegular, fontMedium, fontLight, fontBold, fontSemiBold]);
 
 	const { searchParams } = new URL(req.url);
 
@@ -209,6 +212,12 @@ export default async function handler(req: NextRequest) {
 					data: fontDataBold,
 					style: 'normal',
 					weight: 700,
+				},
+				{
+					name: 'Typewriter',
+					data: fontDataSemiBold,
+					style: 'normal',
+					weight: 600,
 				},
 			],
 		},
