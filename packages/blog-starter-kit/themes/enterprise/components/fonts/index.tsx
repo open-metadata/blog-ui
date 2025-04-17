@@ -10,22 +10,22 @@ const inter = Inter({
 const suisseIntl = localFont({
     src: [
       {
-        path: '../../assets/SuisseIntl-Regular.woff',
+        path: '../../assets/SuisseIntl-Regular.woff2',
         weight: '400',
         style: 'normal',
       },
       {
-        path: '../../assets/SuisseIntl-Bold.woff',
+        path: '../../assets/SuisseIntl-Bold.woff2',
         weight: '700',
         style: 'normal',
       },
       {
-        path: '../../assets/SuisseIntl-Medium.woff',
+        path: '../../assets/SuisseIntl-Medium.woff2',
         weight: '500',
         style: 'normal',
       },
       {
-        path: '../../assets/SuisseIntl-SemiBold.woff',
+        path: '../../assets/SuisseIntl-SemiBold.woff2',
         weight: '600',
         style: 'normal',
       },

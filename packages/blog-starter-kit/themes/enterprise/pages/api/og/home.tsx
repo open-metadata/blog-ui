@@ -8,17 +8,17 @@ export const config = {
 };
 
 const fontRegular = fetch(
-	new URL('../../../assets/SuisseIntl-Regular.woff', import.meta.url),
+	new URL('../../../assets/SuisseIntl-Regular.woff2', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const fontMedium = fetch(
-	new URL('../../../assets/SuisseIntl-Medium.woff', import.meta.url),
+	new URL('../../../assets/SuisseIntl-Medium.woff2', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-const fontBold = fetch(new URL('../../../assets/SuisseIntl-Bold.woff', import.meta.url)).then(
+const fontBold = fetch(new URL('../../../assets/SuisseIntl-Bold.woff2', import.meta.url)).then(
 	(res) => res.arrayBuffer(),
 );
-const fontSemiBold = fetch(new URL('../../../assets/SuisseIntl-SemiBold.woff', import.meta.url)).then(
+const fontSemiBold = fetch(new URL('../../../assets/SuisseIntl-SemiBold.woff2', import.meta.url)).then(
 	(res) => res.arrayBuffer(),
 );
 
