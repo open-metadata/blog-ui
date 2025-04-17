@@ -53,6 +53,7 @@ module.exports = {
 						},
 						h1: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
+							fontWeight: 700,
 						  },
 						  h2: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
