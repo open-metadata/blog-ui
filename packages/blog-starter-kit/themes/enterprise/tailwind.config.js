@@ -54,22 +54,22 @@ module.exports = {
 						h1: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
 							fontWeight: 700,
-						  },
-						  h2: {
+						},
+					    h2: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
-						  },
-						  h3: {
+						},
+					    h3: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
-						  },
-						  h4: {
+					    },
+						h4: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
-						  },
-						  h5: {
+						},
+						h5: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
-						  },
-						  h6: {
+						},
+						h6: {
 							fontFamily: `${[fontSuisseIntlVar, ...defaultTheme.fontFamily.sans]}`,
-						  },
+						},
 					},
 				},
 			}),
@@ -91,6 +91,7 @@ module.exports = {
 			boxShadow: {
 				sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
 				md: '0 8px 30px rgba(0, 0, 0, 0.12)',
+				shadow: '0px 4px 32px 0px rgba(0, 0, 0, 0.12)',
 			},
 		},
 	},
