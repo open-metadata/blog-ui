@@ -93,7 +93,7 @@ export default async function handler(req: NextRequest) {
 						{/* if title char count is >= 110 change the tailwind text-* class to text-5xl */}
 						{/* if title char count is 80 - 109 change the tailwind text-* class to text-6xl */}
 						{/* if title char count is <=79 change the tailwind text-* class to text-7xl */}
-						<p tw={`${titleTailwindClass} mb-5 mt-0 text-center font-extrabold leading-tight`}>
+						<p tw={`${titleTailwindClass} mb-5 mt-0 text-center leading-tight`}>
 							{title}
 						</p>
 					</div>
