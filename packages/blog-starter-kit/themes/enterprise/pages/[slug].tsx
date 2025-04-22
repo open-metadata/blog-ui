@@ -178,7 +178,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				</div>
 				<div className="col-span-2 hidden lg:block">
 					<div className="sticky top-24 mb-4 w-full px-5">
-						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50 md:text-lg">
+						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50">
 							<Avatar
 								username={post.author.username}
 								name={post.author.name}
