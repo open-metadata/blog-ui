@@ -25,6 +25,7 @@ export const Layout = ({ children }: Props) => {
             		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             		})(window,document,'script','dataLayer','GTM-554C968W');`,
         		}}
+				id='tag-manager'
       		/>
 			<Integrations />
 		</>
