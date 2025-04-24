@@ -26,18 +26,18 @@ export const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
 				/>
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
-				<h2 className="text-xl font-bold font-heading leading-snug text-slate-800 dark:text-neutral-50 lg:text-3xl">
+				<h2 className="text-xl font-bold font-heading text-[#181D27] dark:text-neutral-50 lg:text-3xl">
 					<Link
 						href={postURL}
-						className="hover:text-primary-600 dark:hover:text-primary-500 leading-tight tracking-tight hover:underline"
+						className="hover:underline"
 					>
 						{title}
 					</Link>
 				</h2>
 				<Link href={postURL}>
-					<p className="text-md leading-snug text-slate-500 dark:text-neutral-400">{excerpt}</p>
+					<p className="text-md text-[#414651] leading-[160%] dark:text-neutral-400">{excerpt}</p>
 				</Link>
-				<div className="text-sm font-semibold text-slate-500 dark:text-neutral-300">
+				<div className="text-sm text-[#717680] dark:text-neutral-300">
 					<Link href={postURL}>
 						<DateFormatter dateString={date} />
 					</Link>
