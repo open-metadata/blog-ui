@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import { useAppContext } from './contexts/appContext';
 
 export function Integrations() {
 	const { publication } = useAppContext();
 	const {
-		gaTrackingID,
 		fbPixelID,
 		hotjarSiteID,
 		matomoURL,
@@ -58,14 +56,6 @@ export function Integrations() {
 				)}/matomo.js'; s.parentNode.insertBefore(g,s);
       })();
   `;
-
-	useEffect(() => {
-		// @ts-ignore
-		window.gtag('config', gaTrackingID, {
-			transport_url: 'https://ping.hashnode.com',
-			first_party_collection: true,
-		});
-	}, []);
 
 	return (
 		<>
