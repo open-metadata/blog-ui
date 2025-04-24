@@ -20,16 +20,16 @@ export const PostHeader = ({ title, coverImage, author, date, readTimeInMinutes 
 	return (
 		<>
 			<PostTitle className="mb-8 lg:mb-12">{title}</PostTitle>
-			<div className="mb-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0 lg:hidden">
+			<div className="mb-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-[#717680] dark:text-neutral-300 md:px-0 lg:hidden">
 				<Avatar
 					username={author.username}
 					name={author.name}
 					size={8}
 					picture={author.profilePicture}
 				/>
-				<span className="block font-bold text-slate-500">&middot;</span>
+				<span className="block font-bold text-[#717680]">&middot;</span>
 				<DateFormatter dateString={date} />
-				{readTimeInMinutes && <span className="block font-bold text-slate-500">&middot;</span>}
+				{readTimeInMinutes && <span className="block font-bold text-[#717680]">&middot;</span>}
 				<ReadTimeInMinutes readTimeInMinutes={readTimeInMinutes} />
 			</div>
 			{coverImage && (

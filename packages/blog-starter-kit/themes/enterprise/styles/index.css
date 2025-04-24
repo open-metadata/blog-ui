@@ -53,7 +53,7 @@
 
 
 .hashnode-content-style{
-	@apply prose break-words text-slate-950 first:prose-p:mt-0 prose-img:max-w-full prose-a:underline hover:prose-a:bg-primary-50 dark:hover:prose-a:text-primary-500 dark:hover:prose-a:bg-neutral-800 dark:text-neutral-50 lg:prose-lg dark:prose-invert dark:prose-pre:bg-neutral-900 first:prose-h1:mt-0 first:prose-h2:mt-0 first:prose-h3:mt-0 first:prose-h4:mt-0 first:prose-h5:mt-0;
+	@apply prose break-words text-[#414651] first:prose-p:mt-0 prose-img:max-w-full prose-a:underline hover:prose-a:bg-primary-50 dark:hover:prose-a:text-primary-500 dark:hover:prose-a:bg-neutral-800 dark:text-neutral-50 lg:prose-lg dark:prose-invert dark:prose-pre:bg-neutral-900 first:prose-h1:mt-0 first:prose-h2:mt-0 prose-h2:font-bold first:prose-h3:mt-0 first:prose-h4:mt-0 first:prose-h5:mt-0;
 }
 
 /* Override to remove the backtick */
