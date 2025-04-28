@@ -168,7 +168,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 					/>
 					<MarkdownToHtml contentMarkdown={post.content.markdown} />
 					{(post.tags ?? []).length > 0 && (
-						<div className="text-slate-600 dark:text-neutral-300 lg:hidden">
+						<div className="text-[#414651] dark:text-neutral-300 px-5 my-3 lg:hidden">
 							<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
 						</div>
 					)}
@@ -178,14 +178,14 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				</div>
 				<div className="col-span-2 hidden lg:block">
 					<div className="sticky top-24 mb-4 w-full px-5">
-						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50 md:text-lg">
+						<div className="w-full rounded-2xl border p-5 text-base leading-snug dark:border-neutral-800 dark:text-neutral-50">
 							<Avatar
 								username={post.author.username}
 								name={post.author.name}
 								size={8}
 								picture={post.author.profilePicture}
 							/>
-							<div className="mb-4 flex w-full flex-row flex-wrap  items-center gap-2 px-2 text-slate-700 dark:text-neutral-300 md:px-0">
+							<div className="mb-4 mt-2 flex w-full flex-row flex-wrap  items-center gap-2 px-2 text-[#717680] dark:text-neutral-300 md:px-0">
 								<DateFormatter dateString={post.publishedAt} />
 								{post.readTimeInMinutes && (
 									<span className="block font-bold text-slate-500">&middot;</span>
@@ -193,7 +193,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 								<ReadTimeInMinutes readTimeInMinutes={post.readTimeInMinutes} />
 							</div>
 							{(post.tags ?? []).length > 0 && (
-								<div className="text-slate-600 dark:text-neutral-300">
+								<div className="text-[#414651] dark:text-neutral-300">
 									<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
 								</div>
 							)}
