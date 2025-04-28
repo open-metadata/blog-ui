@@ -61,6 +61,23 @@
 	content: none;
 }
 
+.cookie-card {
+	background: linear-gradient(112.27deg, #f4fdff 17.47%, #fcf4f4 84.06%);
+    border: 1px solid #6863ce;
+    border-radius: 10px;
+}
+
+.cookie-modal {
+    transform: translateY(100%); 
+    transition: transform 1.2s ease-in-out, visibility 1.2s ease-in-out;
+    visibility: hidden;
+}
+
+.cookie-modal.visible {
+    transform: translateY(0); 
+    visibility: visible;
+}
+
 .prose code {
 	border-radius: 0.25rem;
 	font-weight: 400 !important;
