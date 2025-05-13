@@ -27,7 +27,7 @@ const CookieModal = ({ handleButtonClick }: { handleButtonClick: (choice: string
                 We use cookies to improve site navigation, analyze site usage,
                 and enhance your user experience. Click &quot;Accept&quot; to enable
                 cookies or &quot;Reject&quot; to reject cookies. To learn more, read our{' '}
-                <Link href="/privacypolicy">
+                <Link href="https://www.getcollate.io/privacypolicy">
                     <span className="underline text-primary cursor-pointer">
                         Privacy Policy
                     </span>
