@@ -22,48 +22,44 @@ export const SocialLinks = ({
 				{hasSocialLinks && (
 					<>
 						{publication.links?.twitter && (
-							<a
-								href={publication.links.twitter}
+							<ParamLink
+								link={publication.links.twitter}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Twitter, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<XSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.github && (
-							<a
-								href={publication.links.github}
+							<ParamLink
+								link={publication.links.github}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Github, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<GithubSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.linkedin && (
-							<a
-								href={publication.links.linkedin}
+							<ParamLink
+								link={publication.links.linkedin}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Linkedin, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<LinkedinSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.hashnode && (
-							<a
-								href={publication.links.hashnode}
+							<ParamLink
+								link={publication.links.hashnode}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Hashnode, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<HashnodeSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 					</>
 				)}

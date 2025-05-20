@@ -31,11 +31,10 @@ export const Footer = () => {
 						<p className="text-[#E0E0E0]">All Rights Reserved</p>
 						<ul className="flex">
 							<li className="group mr-3 flex cursor-pointer items-center justify-center duration-300">
-								<a
-									href="https://twitter.com/collatedata"
+								<ParamLink
+									link="https://twitter.com/collatedata"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
-									rel="noopener noreferrer"
 									aria-label="Twitter link of getCollate"
 								>
 									<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,14 +54,13 @@ export const Footer = () => {
 											</clipPath>
 										</defs>
 									</svg>
-								</a>
+								</ParamLink>
 							</li>
 							<li className="  group mr-3 flex cursor-pointer items-center justify-center duration-300">
-								<a
-									href="https://www.linkedin.com/company/collateinc"
+								<ParamLink
+									link="https://www.linkedin.com/company/collateinc"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
-									rel="noopener noreferrer"
 									aria-label="LinkedIn link of getCollate"
 								>
 									<svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +80,7 @@ export const Footer = () => {
 											</clipPath>
 										</defs>
 									</svg>
-								</a>
+								</ParamLink>
 							</li>
 						</ul>
 					</div>
@@ -91,54 +89,53 @@ export const Footer = () => {
 							<h3 className="w-min text-xl font-semibold text-white">Company</h3>
 							<ul className="text-footer flex flex-col gap-4 pt-5 dark:text-neutral-300">
 								<li>
-									<a
-										href="https://www.getcollate.io/product"
+									<ParamLink
+										link="https://www.getcollate.io/product"
 										className="footer-link hover:underline"
-									>
-										Product
-									</a>
+										name="Product"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/pricing"
+									<ParamLink
+										link="https://www.getcollate.io/pricing"
 										className="footer-link hover:underline"
-									>
-										Pricing
-									</a>
+										name="Pricing"
+									/>
 								</li>
 								<li>
-									<a href="https://blog.getcollate.io" className="footer-link hover:underline">
-										Blog
-									</a>
-								</li>
-								<li>
-									<a
-										href="https://www.getcollate.io/careers"
+									<ParamLink
+										link="https://blog.getcollate.io"
 										className="footer-link hover:underline"
-									>
-										Careers
-									</a>
+										name="Blog"
+									/>
 								</li>
 								<li>
-									<a href="https://www.getcollate.io/about" className="footer-link hover:underline">
-										About
-									</a>
+									<ParamLink
+										link="https://www.getcollate.io/careers"
+										className="footer-link hover:underline"
+										name="Careers"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/contact"
+									<ParamLink
+										link="https://www.getcollate.io/about"
+										className="footer-link hover:underline"
+										name="About"
+									/>
+								</li>
+								<li>
+									<ParamLink
+										link="https://www.getcollate.io/contact"
 										className="footer-link hover:underline "
-									>
-										Contact Us
-									</a>
+										name="Contact Us"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/book-demo"
+									<ParamLink
+										link="https://www.getcollate.io/book-demo"
 										className="footer-link hover:underline"
-									>
-										Book a Demo
-									</a>
+										name="Book a Demo"
+									/>
 								</li>
 							</ul>
 						</div>
@@ -146,49 +143,44 @@ export const Footer = () => {
 							<h3 className="w-min text-xl font-semibold text-white">Support</h3>
 							<ul className="text-footer mt-5 flex flex-col gap-5 dark:text-neutral-300">
 								<li>
-									<a
-										href="https://www.getcollate.io/terms"
+									<ParamLink
+										link="https://www.getcollate.io/terms"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Terms of Service
-									</a>
+										name="Terms of Service"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/privacypolicy"
+									<ParamLink
+										link="https://www.getcollate.io/privacypolicy"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Privacy Policy
-									</a>
+										name="Privacy Policy"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://trustcenter.getcollate.io"
+									<ParamLink
+										link="https://trustcenter.getcollate.io"
 										className="footer-link hover:underline "
 										target="_blank"
-									>
-										Trust Center
-									</a>
+										name="Trust Center"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://www.getcollate.io/roadmap"
+									<ParamLink
+										link="https://www.getcollate.io/roadmap"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Roadmap
-									</a>
+										name="Roadmap"
+									/>
 								</li>
 								<li>
-									<a
-										href="https://docs.getcollate.io"
+									<ParamLink
+										link="https://docs.getcollate.io"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Documentation
-									</a>
+										name="Documentation"
+									/>
 								</li>
 							</ul>
 						</div>
