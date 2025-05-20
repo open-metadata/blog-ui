@@ -1,8 +1,8 @@
 import { resizeImage } from '@starter-kit/utils/image';
-import Link from 'next/link';
 import { DEFAULT_COVER } from '../utils/const';
 import { CoverImage } from './cover-image';
 import { DateFormatter } from './date-formatter';
+import ParamLink from './ParamLink';
 
 type Props = {
 	title: string;
@@ -26,22 +26,17 @@ export const SecondaryPost = ({ title, coverImage, date, excerpt, slug }: Props)
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
 				<h1 className="text-lg font-bold font-heading text-[#181D27] dark:text-neutral-50">
-					<Link
-						href={postURL}
-						className="hover:underline"
-					>
-						{title}
-					</Link>
+					<ParamLink link={postURL} name={title} className='hover:underline' />
 				</h1>
-				<Link href={postURL}>
+				<ParamLink link={postURL}>
 					<p className="text-md text-[#414651] dark:text-neutral-400">
 						{excerpt.length > 100 ? excerpt.substring(0, 100) + '…' : excerpt}
 					</p>
-				</Link>
+				</ParamLink>
 				<div className="text-sm text-[#717680] dark:text-neutral-300">
-					<Link href={postURL}>
+					<ParamLink link={postURL}>
 						<DateFormatter dateString={date} />
-					</Link>
+					</ParamLink>
 				</div>
 			</div>
 		</section>

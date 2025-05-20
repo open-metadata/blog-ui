@@ -6,6 +6,7 @@ import { useAppContext } from './contexts/appContext';
 import HamburgerSVG from './icons/svgs/HamburgerSVG';
 import { PublicationLogo } from './publication-logo';
 import PublicationSidebar from './sidebar';
+import ParamLink from './ParamLink';
 
 export const NAV_LINKS = [
 	{
@@ -73,31 +74,27 @@ export const Header = () => {
 		<ul className="flex flex-row items-center gap-10 text-[#162044]">
 			{NAV_LINKS.map((item) => (
 				<li key={item.url}>
-					<a
-						id={item.id}
-						href={item.url}
+					<ParamLink
+						link={item.url}
 						target={item?.isExternalLink ? '_blank' : '_self'}
-						rel="noopener noreferrer"
 						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap text-[16px] font-medium ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''
 						}`}
 					>
 						{item.label}
-					</a>
+					</ParamLink>
 				</li>
 			))}
 			<BookDemoDropDown />
 			<li>
-				<a
-					id="get-collate-free-button-navbar--blog"
+				<ParamLink
+					link="https://cloud.getcollate.io/signup"
 					target="_self"
-					rel="noopener noreferrer"
 					className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200"
 					aria-label="signup to getCollate"
-					href="https://cloud.getcollate.io/signup"
 				>
 					<span className="font-medium lg:mx-6">Get Collate Free</span>
-				</a>
+				</ParamLink>
 			</li>
 		</ul>
 	);

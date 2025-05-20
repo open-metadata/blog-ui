@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import ParamLink from './ParamLink';
 
 type Props = {
 	title: string;
@@ -26,9 +26,9 @@ export const CoverImage = ({ title, src, slug, priority = false }: Props) => {
 	return (
 		<div className="sm:mx-0">
 			{slug ? (
-				<Link href={postURL} aria-label={title}>
+				<ParamLink link={postURL} aria-label={title}>
 					{image}
-				</Link>
+				</ParamLink>
 			) : (
 				image
 			)}

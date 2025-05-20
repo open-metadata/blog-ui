@@ -1,5 +1,6 @@
 import { PostFullFragment } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
+import ParamLink from './ParamLink';
 
 type TableOfContentsItem = PostFullFragment['features']['tableOfContents']['items'][number];
 
@@ -38,12 +39,11 @@ const Toc = ({
 		<ul className="mt-5 flex flex-col gap-5 pl-5 font-medium text-slate-800 dark:text-neutral-200">
 			{children.map((item) => (
 				<li key={item.id}>
-					<a
-						href={`#heading-${item.slug}`}
+					<ParamLink
+						name={item.title}
+						link={`#heading-${item.slug}`}
 						className="hover:text-primary-600 hover:bg-primary-50 dark:hover:text-primary-500 underline dark:hover:bg-neutral-800"
-					>
-						{item.title}
-					</a>
+					/>
 
 					<Toc data={data} parentId={item.id} />
 				</li>
