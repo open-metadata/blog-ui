@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { PublicationFragment } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
+import ParamLink from './ParamLink';
 
 const getPublicationLogo = (publication: PublicationFragment, isSidebar?: boolean) => {
 	if (isSidebar) {
@@ -15,8 +15,8 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 
 	return (
 		<h1 className="relative w-full">
-			<Link
-				href="https://www.getcollate.io/"
+			<ParamLink
+				link="https://www.getcollate.io/"
 				aria-label={`${publication.title} blog home page`}
 				className="flex flex-row items-center justify-center gap-3"
 			>
@@ -37,7 +37,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 						{publication.title}
 					</span>
 				)}
-			</Link>
+			</ParamLink>
 		</h1>
 	);
 };

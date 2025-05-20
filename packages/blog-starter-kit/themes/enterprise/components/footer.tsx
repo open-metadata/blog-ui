@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Container } from './container';
 import { useAppContext } from './contexts/appContext';
+import ParamLink from './ParamLink';
 
 export const Footer = () => {
 	const { publication } = useAppContext();
@@ -11,8 +11,8 @@ export const Footer = () => {
 				<div className="grid w-full grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-4">
 					<div className="text-footer col-span-1 flex flex-col gap-5 dark:text-neutral-300">
 						<div className="flex w-full flex-row">
-							<Link
-								href={'/'}
+							<ParamLink
+								link={'/'}
 								aria-label={`${publication.title} home page`}
 								className="flex flex-row items-center gap-5"
 							>
@@ -23,7 +23,7 @@ export const Footer = () => {
 									src="/assets/footer/collate-logo-footer.svg"
 									alt={publication.title}
 								/>
-							</Link>
+							</ParamLink>
 						</div>
 						<p className="text-[#E0E0E0]">
 							Copyright © {new Date().getFullYear()} <strong>Collate</strong>.

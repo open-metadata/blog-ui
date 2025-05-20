@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { useAppContext } from './contexts/appContext';
 import { GithubSVG, HashnodeSVG, LinkedinSVG, RssSVG, XSVG } from './icons';
+import ParamLink from './ParamLink';
 
 export const SocialLinks = ({
 	isSidebar,
@@ -68,16 +68,14 @@ export const SocialLinks = ({
 					</>
 				)}
 
-				<Link
-					prefetch={false}
-					href={`/rss.xml`}
+				<ParamLink
+					link={`/rss.xml`}
 					target="_blank"
-					rel="noopener noreferrer"
 					aria-label="Open blog XML Feed, opens in new tab"
 					className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 				>
 					<RssSVG className="h-5 w-5 stroke-current" />
-				</Link>
+				</ParamLink>
 			</div>
 		</>
 	);

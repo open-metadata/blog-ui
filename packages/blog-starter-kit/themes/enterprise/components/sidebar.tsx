@@ -1,9 +1,8 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import ParamLink from './ParamLink';
 import BookDemoDropDown from './book-demo-dropdown';
 import { Button } from './button';
-import { useAppContext } from './contexts/appContext';
 import CloseSVG from './icons/svgs/CloseSVG';
 import { PublicationLogo } from './publication-logo';
 import { SocialLinks } from './social-links';
@@ -16,8 +15,6 @@ type Props = {
 function PublicationSidebar(props: Props) {
 	const { toggleSidebar, navbarItems } = props;
 	const [isMounted, setIsMounted] = useState(false);
-	const { publication } = useAppContext();
-	const hasSocialLinks = !Object.values(publication.links!).every((val) => val === '');
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -68,12 +65,11 @@ function PublicationSidebar(props: Props) {
 							<ul className="flex flex-col gap-2 text-slate-700 dark:text-white">
 								{navbarItems.map((item) => (
 									<li key={item.url}>
-										<Link
-											href={item.url}
+										<ParamLink
+											link={item.url}
+											name={item.label}
 											className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 font-medium transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-neutral-800 dark:hover:text-white"
-										>
-											{item.label}
-										</Link>
+										/>
 									</li>
 								))}
 								<BookDemoDropDown isSidebar />
