@@ -4,6 +4,7 @@ import { Avatar } from './avatar';
 import { Button } from './button';
 import { useAppContext } from './contexts/appContext';
 import { ExternalArrowSVG, HashnodeSVG } from './icons';
+import ParamLink from './ParamLink';
 
 export const PostComments = () => {
 	const { post } = useAppContext();
@@ -28,9 +29,9 @@ export const PostComments = () => {
 				<div className="hashnode-content-style" dangerouslySetInnerHTML={{ __html: content }}></div>
 				<div className="flex flex-row gap-5 font-medium text-slate-600 dark:text-neutral-400">
 					{comment.totalReactions > 1 && (
-						<a href={discussionUrl} target="_blank" rel="noopener noreferrer">
+						<ParamLink href={discussionUrl} target="_blank">
 							{comment.totalReactions} likes
-						</a>
+						</ParamLink>
 					)}
 				</div>
 			</div>

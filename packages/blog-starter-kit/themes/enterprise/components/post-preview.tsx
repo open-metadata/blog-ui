@@ -1,9 +1,9 @@
 import { resizeImage } from '@starter-kit/utils/image';
-import Link from 'next/link';
 import { User } from '../generated/graphql';
 import { DEFAULT_COVER } from '../utils/const';
 import { CoverImage } from './cover-image';
 import { DateFormatter } from './date-formatter';
+import ParamLink from './ParamLink';
 
 type Author = Pick<User, 'name' | 'profilePicture'>;
 
@@ -30,22 +30,17 @@ export const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) =
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
 				<h1 className="text-lg font-bold font-heading text-[#181D27] dark:text-neutral-50">
-					<Link
-						href={postURL}
-						className="hover:underline"
-					>
-						{title}
-					</Link>
+					<ParamLink href={postURL} name={title} className='hover:underline' />
 				</h1>
-				<Link href={postURL}>
+				<ParamLink href={postURL}>
 					<p className="text-md text-[#414651] dark:text-neutral-400">
 						{excerpt.length > 140 ? excerpt.substring(0, 140) + '…' : excerpt}
 					</p>
-				</Link>
+				</ParamLink>
 				<div className="text-sm text-[#717680] dark:text-neutral-300">
-					<Link href={postURL}>
+					<ParamLink href={postURL}>
 						<DateFormatter dateString={date} />
-					</Link>
+					</ParamLink>
 				</div>
 			</div>
 		</div>

@@ -1,8 +1,8 @@
 import { resizeImage } from '@starter-kit/utils/image';
-import Link from 'next/link';
 import { DEFAULT_COVER } from '../utils/const';
 import { CoverImage } from './cover-image';
 import { DateFormatter } from './date-formatter';
+import ParamLink from './ParamLink';
 
 type Props = {
 	title: string;
@@ -27,20 +27,15 @@ export const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
 				<h2 className="text-xl font-bold font-heading text-[#181D27] dark:text-neutral-50 lg:text-3xl">
-					<Link
-						href={postURL}
-						className="hover:underline"
-					>
-						{title}
-					</Link>
+					<ParamLink href={postURL} name={title} className='hover:underline' />
 				</h2>
-				<Link href={postURL}>
+				<ParamLink href={postURL}>
 					<p className="text-md text-[#414651] leading-[160%] dark:text-neutral-400">{excerpt}</p>
-				</Link>
+				</ParamLink>
 				<div className="text-sm text-[#717680] dark:text-neutral-300">
-					<Link href={postURL}>
+					<ParamLink href={postURL}>
 						<DateFormatter dateString={date} />
-					</Link>
+					</ParamLink>
 				</div>
 			</div>
 		</section>

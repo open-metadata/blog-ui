@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Container } from './container';
 import { useAppContext } from './contexts/appContext';
+import ParamLink from './ParamLink';
 
 export const Footer = () => {
 	const { publication } = useAppContext();
@@ -11,7 +11,7 @@ export const Footer = () => {
 				<div className="grid w-full grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-4">
 					<div className="text-footer col-span-1 flex flex-col gap-5 dark:text-neutral-300">
 						<div className="flex w-full flex-row">
-							<Link
+							<ParamLink
 								href={'/'}
 								aria-label={`${publication.title} home page`}
 								className="flex flex-row items-center gap-5"
@@ -23,7 +23,7 @@ export const Footer = () => {
 									src="/assets/footer/collate-logo-footer.svg"
 									alt={publication.title}
 								/>
-							</Link>
+							</ParamLink>
 						</div>
 						<p className="text-[#E0E0E0]">
 							Copyright © {new Date().getFullYear()} <strong>Collate</strong>.
@@ -31,11 +31,10 @@ export const Footer = () => {
 						<p className="text-[#E0E0E0]">All Rights Reserved</p>
 						<ul className="flex">
 							<li className="group mr-3 flex cursor-pointer items-center justify-center duration-300">
-								<a
+								<ParamLink
 									href="https://twitter.com/collatedata"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
-									rel="noopener noreferrer"
 									aria-label="Twitter link of getCollate"
 								>
 									<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,14 +54,13 @@ export const Footer = () => {
 											</clipPath>
 										</defs>
 									</svg>
-								</a>
+								</ParamLink>
 							</li>
 							<li className="  group mr-3 flex cursor-pointer items-center justify-center duration-300">
-								<a
+								<ParamLink
 									href="https://www.linkedin.com/company/collateinc"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
-									rel="noopener noreferrer"
 									aria-label="LinkedIn link of getCollate"
 								>
 									<svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +80,7 @@ export const Footer = () => {
 											</clipPath>
 										</defs>
 									</svg>
-								</a>
+								</ParamLink>
 							</li>
 						</ul>
 					</div>
@@ -91,54 +89,53 @@ export const Footer = () => {
 							<h3 className="w-min text-xl font-semibold text-white">Company</h3>
 							<ul className="text-footer flex flex-col gap-4 pt-5 dark:text-neutral-300">
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/product"
 										className="footer-link hover:underline"
-									>
-										Product
-									</a>
+										name="Product"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/pricing"
 										className="footer-link hover:underline"
-									>
-										Pricing
-									</a>
+										name="Pricing"
+									/>
 								</li>
 								<li>
-									<a href="https://blog.getcollate.io" className="footer-link hover:underline">
-										Blog
-									</a>
+									<ParamLink
+										href="https://blog.getcollate.io"
+										className="footer-link hover:underline"
+										name="Blog"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/careers"
 										className="footer-link hover:underline"
-									>
-										Careers
-									</a>
+										name="Careers"
+									/>
 								</li>
 								<li>
-									<a href="https://www.getcollate.io/about" className="footer-link hover:underline">
-										About
-									</a>
+									<ParamLink
+										href="https://www.getcollate.io/about"
+										className="footer-link hover:underline"
+										name="About"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/contact"
 										className="footer-link hover:underline "
-									>
-										Contact Us
-									</a>
+										name="Contact Us"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/book-demo"
 										className="footer-link hover:underline"
-									>
-										Book a Demo
-									</a>
+										name="Book a Demo"
+									/>
 								</li>
 							</ul>
 						</div>
@@ -146,49 +143,44 @@ export const Footer = () => {
 							<h3 className="w-min text-xl font-semibold text-white">Support</h3>
 							<ul className="text-footer mt-5 flex flex-col gap-5 dark:text-neutral-300">
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/terms"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Terms of Service
-									</a>
+										name="Terms of Service"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/privacypolicy"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Privacy Policy
-									</a>
+										name="Privacy Policy"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://trustcenter.getcollate.io"
 										className="footer-link hover:underline "
 										target="_blank"
-									>
-										Trust Center
-									</a>
+										name="Trust Center"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://www.getcollate.io/roadmap"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Roadmap
-									</a>
+										name="Roadmap"
+									/>
 								</li>
 								<li>
-									<a
+									<ParamLink
 										href="https://docs.getcollate.io"
 										className="footer-link hover:underline"
 										target="_blank"
-									>
-										Documentation
-									</a>
+										name="Documentation"
+									/>
 								</li>
 							</ul>
 						</div>

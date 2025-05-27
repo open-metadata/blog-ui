@@ -1,9 +1,8 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import ParamLink from './ParamLink';
 import BookDemoDropDown from './book-demo-dropdown';
 import { Button } from './button';
-import { useAppContext } from './contexts/appContext';
 import CloseSVG from './icons/svgs/CloseSVG';
 import { PublicationLogo } from './publication-logo';
 import { SocialLinks } from './social-links';
@@ -16,8 +15,6 @@ type Props = {
 function PublicationSidebar(props: Props) {
 	const { toggleSidebar, navbarItems } = props;
 	const [isMounted, setIsMounted] = useState(false);
-	const { publication } = useAppContext();
-	const hasSocialLinks = !Object.values(publication.links!).every((val) => val === '');
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -68,26 +65,23 @@ function PublicationSidebar(props: Props) {
 							<ul className="flex flex-col gap-2 text-slate-700 dark:text-white">
 								{navbarItems.map((item) => (
 									<li key={item.url}>
-										<Link
+										<ParamLink
 											href={item.url}
+											name={item.label}
 											className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 font-medium transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-neutral-800 dark:hover:text-white"
-										>
-											{item.label}
-										</Link>
+										/>
 									</li>
 								))}
 								<BookDemoDropDown isSidebar />
 								<li className="py-3">
-									<a
-										id="get-collate-free-button-navbar--blog"
+									<ParamLink
 										target="_self"
-										rel="noopener noreferrer"
 										className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
 										aria-label="signup to getCollate"
 										href="https://cloud.getcollate.io/signup"
 									>
 										<span className="font-medium lg:mx-6">Get Collate Free</span>
-									</a>
+									</ParamLink>
 								</li>
 							</ul>
 						</section>

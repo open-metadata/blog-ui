@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { useAppContext } from './contexts/appContext';
 import { GithubSVG, HashnodeSVG, LinkedinSVG, RssSVG, XSVG } from './icons';
+import ParamLink from './ParamLink';
 
 export const SocialLinks = ({
 	isSidebar,
@@ -22,62 +22,56 @@ export const SocialLinks = ({
 				{hasSocialLinks && (
 					<>
 						{publication.links?.twitter && (
-							<a
+							<ParamLink
 								href={publication.links.twitter}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Twitter, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<XSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.github && (
-							<a
+							<ParamLink
 								href={publication.links.github}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Github, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<GithubSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.linkedin && (
-							<a
+							<ParamLink
 								href={publication.links.linkedin}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Linkedin, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<LinkedinSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 						{publication.links?.hashnode && (
-							<a
+							<ParamLink
 								href={publication.links.hashnode}
 								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Find us on Hashnode, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 							>
 								<HashnodeSVG className="h-5 w-5 stroke-current" />
-							</a>
+							</ParamLink>
 						)}
 					</>
 				)}
 
-				<Link
-					prefetch={false}
+				<ParamLink
 					href={`/rss.xml`}
 					target="_blank"
-					rel="noopener noreferrer"
 					aria-label="Open blog XML Feed, opens in new tab"
 					className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
 				>
 					<RssSVG className="h-5 w-5 stroke-current" />
-				</Link>
+				</ParamLink>
 			</div>
 		</>
 	);
