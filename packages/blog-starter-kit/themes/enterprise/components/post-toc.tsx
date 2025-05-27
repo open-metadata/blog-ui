@@ -41,7 +41,7 @@ const Toc = ({
 				<li key={item.id}>
 					<ParamLink
 						name={item.title}
-						link={`#heading-${item.slug}`}
+						href={`#heading-${item.slug}`}
 						className="hover:text-primary-600 hover:bg-primary-50 dark:hover:text-primary-500 underline dark:hover:bg-neutral-800"
 					/>
 

@@ -66,7 +66,7 @@ function PublicationSidebar(props: Props) {
 								{navbarItems.map((item) => (
 									<li key={item.url}>
 										<ParamLink
-											link={item.url}
+											href={item.url}
 											name={item.label}
 											className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 font-medium transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-neutral-800 dark:hover:text-white"
 										/>
@@ -78,7 +78,7 @@ function PublicationSidebar(props: Props) {
 										target="_self"
 										className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200 lg:px-0"
 										aria-label="signup to getCollate"
-										link="https://cloud.getcollate.io/signup"
+										href="https://cloud.getcollate.io/signup"
 									>
 										<span className="font-medium lg:mx-6">Get Collate Free</span>
 									</ParamLink>

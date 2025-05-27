@@ -36,7 +36,7 @@ export default function Post({ publication, post }: Props) {
 	const tagsList = post.tags?.map((tag) => (
 		<li key={tag.id}>
 			<ParamLink
-				link={`/tag/${tag.slug}`}
+				href={`/tag/${tag.slug}`}
 				className="block rounded-full border px-2 py-1 font-medium hover:bg-slate-50 dark:border-neutral-800 dark:hover:bg-neutral-800 md:px-4"
 			>
 				#{tag.slug}

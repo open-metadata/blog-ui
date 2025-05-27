@@ -75,7 +75,7 @@ export const Header = () => {
 			{NAV_LINKS.map((item) => (
 				<li key={item.url}>
 					<ParamLink
-						link={item.url}
+						href={item.url}
 						target={item?.isExternalLink ? '_blank' : '_self'}
 						className={`hover:text-link block max-w-[200px] truncate text-ellipsis whitespace-nowrap text-[16px] font-medium ${
 							item.url === 'https://blog.getcollate.io/' ? 'text-link' : ''
@@ -88,7 +88,7 @@ export const Header = () => {
 			<BookDemoDropDown />
 			<li>
 				<ParamLink
-					link="https://cloud.getcollate.io/signup"
+					href="https://cloud.getcollate.io/signup"
 					target="_self"
 					className="bg-secondary h-8 rounded-full px-4 py-2 text-[16px] text-base font-medium text-white duration-200"
 					aria-label="signup to getCollate"

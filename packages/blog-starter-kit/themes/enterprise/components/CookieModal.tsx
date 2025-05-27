@@ -28,7 +28,7 @@ const CookieModal = ({ handleButtonClick }: { handleButtonClick: (choice: string
 				experience. Click &quot;Accept&quot; to enable cookies or &quot;Reject&quot; to reject
 				cookies. To learn more, read our{' '}
 				<ParamLink
-					link="https://www.getcollate.io/privacypolicy"
+					href="https://www.getcollate.io/privacypolicy"
 					name="Privacy Policy"
 					className="text-primary cursor-pointer underline"
 				/>

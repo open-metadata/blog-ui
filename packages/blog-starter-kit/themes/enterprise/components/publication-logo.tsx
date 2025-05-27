@@ -16,7 +16,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 	return (
 		<h1 className="relative w-full">
 			<ParamLink
-				link="https://www.getcollate.io/"
+				href="https://www.getcollate.io/"
 				aria-label={`${publication.title} blog home page`}
 				className="flex flex-row items-center justify-center gap-3"
 			>

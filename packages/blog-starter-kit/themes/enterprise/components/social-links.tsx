@@ -23,7 +23,7 @@ export const SocialLinks = ({
 					<>
 						{publication.links?.twitter && (
 							<ParamLink
-								link={publication.links.twitter}
+								href={publication.links.twitter}
 								target="_blank"
 								aria-label="Find us on Twitter, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
@@ -33,7 +33,7 @@ export const SocialLinks = ({
 						)}
 						{publication.links?.github && (
 							<ParamLink
-								link={publication.links.github}
+								href={publication.links.github}
 								target="_blank"
 								aria-label="Find us on Github, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
@@ -43,7 +43,7 @@ export const SocialLinks = ({
 						)}
 						{publication.links?.linkedin && (
 							<ParamLink
-								link={publication.links.linkedin}
+								href={publication.links.linkedin}
 								target="_blank"
 								aria-label="Find us on Linkedin, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
@@ -53,7 +53,7 @@ export const SocialLinks = ({
 						)}
 						{publication.links?.hashnode && (
 							<ParamLink
-								link={publication.links.hashnode}
+								href={publication.links.hashnode}
 								target="_blank"
 								aria-label="Find us on Hashnode, external website, opens in new tab"
 								className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}
@@ -65,7 +65,7 @@ export const SocialLinks = ({
 				)}
 
 				<ParamLink
-					link={`/rss.xml`}
+					href={`/rss.xml`}
 					target="_blank"
 					aria-label="Open blog XML Feed, opens in new tab"
 					className={`flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600 ${iconClass}`}

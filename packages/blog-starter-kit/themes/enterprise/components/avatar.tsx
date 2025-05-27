@@ -13,7 +13,7 @@ export const Avatar = ({ username, name, picture, size }: Props) => {
 	return (
 		<div className="flex items-center gap-2">
 			<ParamLink
-				link={`https://hashnode.com/@${username}`}
+				href={`https://hashnode.com/@${username}`}
 				className={
 					size
 						? `w-${size} h-${size} block overflow-hidden rounded-full`
@@ -28,7 +28,7 @@ export const Avatar = ({ username, name, picture, size }: Props) => {
 				/>
 			</ParamLink>
 			<div className="text-base font-bold text-[#181D27] dark:text-neutral-300">
-				<ParamLink name={name} link={`https://hashnode.com/@${username}`} target="_blank" />
+				<ParamLink name={name} href={`https://hashnode.com/@${username}`} target="_blank" />
 			</div>
 		</div>
 	);

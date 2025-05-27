@@ -29,7 +29,7 @@ export const PostComments = () => {
 				<div className="hashnode-content-style" dangerouslySetInnerHTML={{ __html: content }}></div>
 				<div className="flex flex-row gap-5 font-medium text-slate-600 dark:text-neutral-400">
 					{comment.totalReactions > 1 && (
-						<ParamLink link={discussionUrl} target="_blank">
+						<ParamLink href={discussionUrl} target="_blank">
 							{comment.totalReactions} likes
 						</ParamLink>
 					)}

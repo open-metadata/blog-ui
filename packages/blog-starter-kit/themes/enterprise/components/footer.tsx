@@ -12,7 +12,7 @@ export const Footer = () => {
 					<div className="text-footer col-span-1 flex flex-col gap-5 dark:text-neutral-300">
 						<div className="flex w-full flex-row">
 							<ParamLink
-								link={'/'}
+								href={'/'}
 								aria-label={`${publication.title} home page`}
 								className="flex flex-row items-center gap-5"
 							>
@@ -32,7 +32,7 @@ export const Footer = () => {
 						<ul className="flex">
 							<li className="group mr-3 flex cursor-pointer items-center justify-center duration-300">
 								<ParamLink
-									link="https://twitter.com/collatedata"
+									href="https://twitter.com/collatedata"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
 									aria-label="Twitter link of getCollate"
@@ -58,7 +58,7 @@ export const Footer = () => {
 							</li>
 							<li className="  group mr-3 flex cursor-pointer items-center justify-center duration-300">
 								<ParamLink
-									link="https://www.linkedin.com/company/collateinc"
+									href="https://www.linkedin.com/company/collateinc"
 									target="_blank"
 									className="fill-para duration-300 group-hover:fill-white"
 									aria-label="LinkedIn link of getCollate"
@@ -90,49 +90,49 @@ export const Footer = () => {
 							<ul className="text-footer flex flex-col gap-4 pt-5 dark:text-neutral-300">
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/product"
+										href="https://www.getcollate.io/product"
 										className="footer-link hover:underline"
 										name="Product"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/pricing"
+										href="https://www.getcollate.io/pricing"
 										className="footer-link hover:underline"
 										name="Pricing"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://blog.getcollate.io"
+										href="https://blog.getcollate.io"
 										className="footer-link hover:underline"
 										name="Blog"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/careers"
+										href="https://www.getcollate.io/careers"
 										className="footer-link hover:underline"
 										name="Careers"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/about"
+										href="https://www.getcollate.io/about"
 										className="footer-link hover:underline"
 										name="About"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/contact"
+										href="https://www.getcollate.io/contact"
 										className="footer-link hover:underline "
 										name="Contact Us"
 									/>
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/book-demo"
+										href="https://www.getcollate.io/book-demo"
 										className="footer-link hover:underline"
 										name="Book a Demo"
 									/>
@@ -144,7 +144,7 @@ export const Footer = () => {
 							<ul className="text-footer mt-5 flex flex-col gap-5 dark:text-neutral-300">
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/terms"
+										href="https://www.getcollate.io/terms"
 										className="footer-link hover:underline"
 										target="_blank"
 										name="Terms of Service"
@@ -152,7 +152,7 @@ export const Footer = () => {
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/privacypolicy"
+										href="https://www.getcollate.io/privacypolicy"
 										className="footer-link hover:underline"
 										target="_blank"
 										name="Privacy Policy"
@@ -160,7 +160,7 @@ export const Footer = () => {
 								</li>
 								<li>
 									<ParamLink
-										link="https://trustcenter.getcollate.io"
+										href="https://trustcenter.getcollate.io"
 										className="footer-link hover:underline "
 										target="_blank"
 										name="Trust Center"
@@ -168,7 +168,7 @@ export const Footer = () => {
 								</li>
 								<li>
 									<ParamLink
-										link="https://www.getcollate.io/roadmap"
+										href="https://www.getcollate.io/roadmap"
 										className="footer-link hover:underline"
 										target="_blank"
 										name="Roadmap"
@@ -176,7 +176,7 @@ export const Footer = () => {
 								</li>
 								<li>
 									<ParamLink
-										link="https://docs.getcollate.io"
+										href="https://docs.getcollate.io"
 										className="footer-link hover:underline"
 										target="_blank"
 										name="Documentation"

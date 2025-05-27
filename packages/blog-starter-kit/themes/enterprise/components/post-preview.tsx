@@ -30,15 +30,15 @@ export const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) =
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
 				<h1 className="text-lg font-bold font-heading text-[#181D27] dark:text-neutral-50">
-					<ParamLink link={postURL} name={title} className='hover:underline' />
+					<ParamLink href={postURL} name={title} className='hover:underline' />
 				</h1>
-				<ParamLink link={postURL}>
+				<ParamLink href={postURL}>
 					<p className="text-md text-[#414651] dark:text-neutral-400">
 						{excerpt.length > 140 ? excerpt.substring(0, 140) + '…' : excerpt}
 					</p>
 				</ParamLink>
 				<div className="text-sm text-[#717680] dark:text-neutral-300">
-					<ParamLink link={postURL}>
+					<ParamLink href={postURL}>
 						<DateFormatter dateString={date} />
 					</ParamLink>
 				</div>

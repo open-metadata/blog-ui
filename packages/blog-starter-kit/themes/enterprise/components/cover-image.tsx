@@ -26,7 +26,7 @@ export const CoverImage = ({ title, src, slug, priority = false }: Props) => {
 	return (
 		<div className="sm:mx-0">
 			{slug ? (
-				<ParamLink link={postURL} aria-label={title}>
+				<ParamLink href={postURL} aria-label={title}>
 					{image}
 				</ParamLink>
 			) : (
