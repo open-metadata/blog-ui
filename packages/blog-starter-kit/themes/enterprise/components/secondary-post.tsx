@@ -25,9 +25,9 @@ export const SecondaryPost = ({ title, coverImage, date, excerpt, slug }: Props)
 				/>
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
-				<h1 className="text-lg font-bold font-heading text-[#181D27] dark:text-neutral-50">
+				<h2 className="text-lg font-bold font-heading text-[#181D27] dark:text-neutral-50">
 					<ParamLink href={postURL} name={title} className='hover:underline' />
-				</h1>
+				</h2>
 				<ParamLink href={postURL}>
 					<p className="text-md text-[#414651] dark:text-neutral-400">
 						{excerpt.length > 100 ? excerpt.substring(0, 100) + '…' : excerpt}

@@ -26,9 +26,9 @@ export const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
 				/>
 			</div>
 			<div className="col-span-1 flex flex-col gap-2">
-				<h2 className="text-xl font-bold font-heading text-[#181D27] dark:text-neutral-50 lg:text-3xl">
+				<h1 className="text-xl font-bold font-heading text-[#181D27] dark:text-neutral-50 lg:text-3xl">
 					<ParamLink href={postURL} name={title} className='hover:underline' />
-				</h2>
+				</h1>
 				<ParamLink href={postURL}>
 					<p className="text-md text-[#414651] leading-[160%] dark:text-neutral-400">{excerpt}</p>
 				</ParamLink>
