@@ -47,7 +47,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo, t
 	const [pageInfo, setPageInfo] = useState<Props['initialPageInfo']>(initialPageInfo);
 	const [currentPage, setCurrentPage] = useState(1);
 
-	const paginationPosts = Math.ceil((totalPosts - 4) / 10);
+	const paginationPosts = Math.ceil(totalPosts / 10);
 	const paginationNumbers = Array.from({ length: paginationPosts }, (_, i) => i + 1);
 
 	const loadMore = async (page: number) => {
