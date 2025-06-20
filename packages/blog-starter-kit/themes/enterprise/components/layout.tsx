@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { Integrations } from './integrations';
 import { Meta } from './meta';
 
