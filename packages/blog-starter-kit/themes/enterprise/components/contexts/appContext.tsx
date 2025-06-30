@@ -1,7 +1,7 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { PostFullFragment, PublicationFragment } from '../../generated/graphql';
 
-type AppContext = { publication: PublicationFragment; post: PostFullFragment | null };
+type AppContext = { publication: PublicationFragment; post: PostFullFragment | null; isEmbedded: boolean };
 
 const AppContext = createContext<AppContext | null>(null);
 
@@ -14,11 +14,19 @@ const AppProvider = ({
 	publication: PublicationFragment;
 	post?: PostFullFragment | null;
 }) => {
+	const [isEmbedded, setIsEmbedded] = useState(false)
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			setIsEmbedded(window.self !== window.top)
+		}
+	}, [])
 	return (
 		<AppContext.Provider
 			value={{
 				publication,
 				post: post ?? null,
+				isEmbedded,
 			}}
 		>
 			{children}
