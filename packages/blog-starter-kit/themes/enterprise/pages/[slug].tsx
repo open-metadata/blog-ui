@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { Container } from '../components/container';
-import { AppProvider } from '../components/contexts/appContext';
+import { AppProvider, useAppContext } from '../components/contexts/appContext';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import { Layout } from '../components/layout';
@@ -136,27 +136,29 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 			</Head>
 			<div className="grid grid-cols-6 pt-10 lg:pt-0">
 				<div className="col-span-full lg:col-span-4">
-					<div
-						className="mb-2 flex cursor-pointer items-center gap-2"
-						onClick={() => router.back()}
-					>
-						<span>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={2}
-								stroke="currentColor"
-								className="h-4 w-4"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-								/>
-							</svg>
-						</span>
-						<span>Back</span>
+					<div className="mb-2">
+						<button
+							onClick={() => router.back()}
+							className="flex cursor-pointer items-center gap-2"
+						>
+							<span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={2}
+									stroke="currentColor"
+									className="h-4 w-4"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+									/>
+								</svg>
+							</span>
+							<span>Back</span>
+						</button>
 					</div>
 					<PostHeader
 						title={post.title}
@@ -216,25 +218,40 @@ const Page = (page: StaticPageFragment) => {
 	);
 };
 
-export default function PostOrPage({ publication, post, page }: Props) {
+type PostOrPageContentProps = {
+	publication: PublicationFragment;
+	post: PostFullFragment | null;
+	page: StaticPageFragment | null;
+};
+
+const PostOrPageContent = ({ publication, post, page }: PostOrPageContentProps) => {
+	const { isEmbedded } = useAppContext();
+
 	if (!post && !page) {
 		return <ErrorPage statusCode={404} />;
 	}
 
 	return (
+		<Layout>
+			{!isEmbedded && <Header />}
+			<Container className="pt-24">
+				<article className="flex flex-col items-start gap-10 pb-10">
+					{post ? Post(publication, post) : Page(page!)}
+				</article>
+			</Container>
+			{!isEmbedded && <Footer />}
+		</Layout>
+	);
+};
+
+export default function PostOrPage({ publication, post, page }: Props) {
+	return (
 		<AppProvider publication={publication} post={post}>
-			<Layout>
-				<Header />
-				<Container className="pt-24">
-					<article className="flex flex-col items-start gap-10 pb-10">
-						{post ? Post(publication, post) : Page(page)}
-					</article>
-				</Container>
-				<Footer />
-			</Layout>
+			<PostOrPageContent publication={publication} post={post} page={page} />
 		</AppProvider>
 	);
 }
+	
 
 type Params = {
 	slug: string;
