@@ -8,7 +8,7 @@ export const BOOK_A_DEMO_LINK = {
 
 export const CONTACT_US_LINK = {
 	label: 'Contact Us',
-	url: 'https://www.getcollate.io/contact',
+	url: 'https://www.getcollate.io/contact-sales',
 	id: 'contact-us',
 };
 
