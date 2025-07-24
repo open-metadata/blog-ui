@@ -1,9 +1,9 @@
 import ParamLink from "./ParamLink";
 
 export const BOOK_A_DEMO_LINK = {
-	label: 'Book a Demo',
-	url: 'https://www.getcollate.io/book-demo',
-	id: 'book-a-demo',
+	label: 'Contact Us',
+	url: 'https://www.getcollate.io/contact-sales',
+	id: 'contact-us',
 };
 
 export const CONTACT_US_LINK = {

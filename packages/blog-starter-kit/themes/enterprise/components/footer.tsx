@@ -125,16 +125,9 @@ export const Footer = () => {
 								</li>
 								<li>
 									<ParamLink
-										href="https://www.getcollate.io/contact"
+										href="https://www.getcollate.io/contact-sales"
 										className="footer-link hover:underline "
 										name="Contact Us"
-									/>
-								</li>
-								<li>
-									<ParamLink
-										href="https://www.getcollate.io/book-demo"
-										className="footer-link hover:underline"
-										name="Book a Demo"
 									/>
 								</li>
 							</ul>
