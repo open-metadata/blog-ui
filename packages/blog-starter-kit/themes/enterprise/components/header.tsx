@@ -30,11 +30,6 @@ export const NAV_LINKS = [
 		id: 'docs',
 		isExternalLink: true,
 	},
-	{
-		label: 'Contact Us',
-		url: 'https://www.getcollate.io/contact',
-		id: 'contact-us',
-	},
 ];
 
 function hasUrl(
