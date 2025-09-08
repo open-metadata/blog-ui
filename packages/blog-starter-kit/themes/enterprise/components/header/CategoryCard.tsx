@@ -20,7 +20,7 @@ const CategoryCard = ({ title, links }: { title: string, links: LinksType[] }) =
                         <div className="flex gap-3 items-start py-2 px-2 hover:bg-[#f8fbfc] hover:rounded-md">
                             <div className="flex-shrink-0 mt-1">
                                 {typeof icon === 'string' ? (
-                                    <img src={icon} alt={title} className="w-6 h-6" />
+                                    <img src={icon} alt={title} className="w-9 h-9" />
                                 ) : (
                                     React.createElement(icon)
                                 )}
