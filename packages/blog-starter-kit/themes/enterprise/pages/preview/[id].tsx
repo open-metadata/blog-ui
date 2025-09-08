@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { Container } from '../../components/container';
 import { AppProvider } from '../../components/contexts/appContext';
 import { Footer } from '../../components/footer';
-import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
 import { MarkdownToHtml } from '../../components/markdown-to-html';
 import { PostHeader } from '../../components/post-header';
@@ -19,6 +18,7 @@ import {
 	PublicationByHostQueryVariables,
 } from '../../generated/graphql';
 import ParamLink from '../../components/ParamLink';
+import HeaderDev from '../../components/header/HeaderDev';
 
 type Props = {
 	post: Post;
@@ -47,7 +47,7 @@ export default function Post({ publication, post }: Props) {
 	return (
 		<AppProvider publication={publication}>
 			<Layout>
-				<Header />
+				<HeaderDev />
 				<Container className="pt-24">
 					<article className="flex flex-col items-start gap-10 pb-10">
 						<Head>
