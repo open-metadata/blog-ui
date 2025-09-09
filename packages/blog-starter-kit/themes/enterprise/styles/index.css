@@ -113,3 +113,26 @@
 	background-color: transparent;
 	color: #ddd;
 }
+
+.dropdown-menu {
+    z-index: 2;
+}
+
+@media (min-width: 1024px) {
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-header {
+        border: 1px solid transparent;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-header {
+        border: 1px solid #e3eef1;
+        background-color: #f8fbfc;
+    }
+}

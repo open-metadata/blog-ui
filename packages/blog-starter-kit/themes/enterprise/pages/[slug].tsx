@@ -8,7 +8,6 @@ import Head from 'next/head';
 import { Container } from '../components/container';
 import { AppProvider, useAppContext } from '../components/contexts/appContext';
 import { Footer } from '../components/footer';
-import { Header } from '../components/header';
 import { Layout } from '../components/layout';
 import { MarkdownToHtml } from '../components/markdown-to-html';
 import { PostHeader } from '../components/post-header';
@@ -38,6 +37,7 @@ import ParamLink from '../components/ParamLink';
 import { Avatar } from '../components/avatar';
 import { DateFormatter } from '../components/date-formatter';
 import { ReadTimeInMinutes } from '../components/post-read-time-in-minutes';
+import HeaderDev from '../components/header/HeaderDev';
 
 const PostComments = dynamic(() =>
 	import('../components/post-comments').then((mod) => mod.PostComments),
@@ -233,7 +233,7 @@ const PostOrPageContent = ({ publication, post, page }: PostOrPageContentProps) 
 
 	return (
 		<Layout>
-			{!isEmbedded && <Header />}
+			{!isEmbedded && <HeaderDev />}
 			<Container className="pt-24">
 				<article className="flex flex-col items-start gap-10 pb-10">
 					{post ? Post(publication, post) : Page(page!)}

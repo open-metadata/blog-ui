@@ -14,7 +14,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 	const PUBLICATION_LOGO = getPublicationLogo(publication, isSidebar);
 
 	return (
-		<div className="relative w-full">
+		<div className="relative">
 			<ParamLink
 				href="https://www.getcollate.io/"
 				aria-label={`${publication.title} blog home page`}

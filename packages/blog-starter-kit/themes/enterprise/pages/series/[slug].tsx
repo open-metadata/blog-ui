@@ -6,7 +6,6 @@ import { Container } from '../../components/container';
 import { AppProvider } from '../../components/contexts/appContext';
 import { CoverImage } from '../../components/cover-image';
 import { Footer } from '../../components/footer';
-import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
 import { MorePosts } from '../../components/more-posts';
 import {
@@ -18,6 +17,7 @@ import {
 	SeriesPostsByPublicationQueryVariables,
 } from '../../generated/graphql';
 import { DEFAULT_COVER } from '../../utils/const';
+import HeaderDev from '../../components/header/HeaderDev';
 
 type Props = {
 	series: SeriesFragment;
@@ -34,7 +34,7 @@ export default function Post({ series, publication, posts }: Props) {
 				<Head>
 					<title>{title}</title>
 				</Head>
-				<Header />
+				<HeaderDev />
 				<Container className="flex flex-col items-stretch gap-10 px-5 pb-10 pt-24">
 					<div
 						className={`${

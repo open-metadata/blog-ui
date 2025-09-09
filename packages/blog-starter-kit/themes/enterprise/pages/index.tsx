@@ -10,7 +10,6 @@ import { Button } from '../components/button';
 import { Container } from '../components/container';
 import { AppProvider, useAppContext } from '../components/contexts/appContext';
 import { Footer } from '../components/footer';
-import { Header } from '../components/header';
 import { HeroPost } from '../components/hero-post';
 import { ArticleSVG, ChevronDownSVG } from '../components/icons';
 import { Layout } from '../components/layout';
@@ -29,6 +28,7 @@ import {
 	PublicationFragment,
 } from '../generated/graphql';
 import { DEFAULT_COVER } from '../utils/const';
+import HeaderDev from '../components/header/HeaderDev';
 
 const SubscribeForm = dynamic(() =>
 	import('../components/subscribe-form').then((mod) => mod.SubscribeForm),
@@ -122,7 +122,7 @@ const IndexContent = ({ publication, initialAllPosts, initialPageInfo }: Props) 
 					}}
 				/>
 			</Head>
-			{!isEmbedded && <Header />}
+			{!isEmbedded && <HeaderDev />}
 			<Container className="flex flex-col items-stretch gap-10 px-5 pb-10 pt-24">
 				<Navbar />
 
