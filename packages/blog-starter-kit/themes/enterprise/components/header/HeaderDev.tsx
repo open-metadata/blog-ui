@@ -7,6 +7,7 @@ import ResourceDropdown from './ResourceDropdown'
 import DropdownItem from './DropdownItem'
 import ResourceDropdownItem from './ResourceDropdownItem'
 import { NAV_LINKS } from '../../constants/Navbar.constants'
+import Image from 'next/image';
 
 function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
     const [open, setOpen] = useState(false)
@@ -135,7 +136,7 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
                                         aria-label="signup to getCollate"
                                     >
                                         <div className="px-10 text-[13px] cursor-pointer items-center gap-[6px] h-10 py-2 flex lg:px-0 content-center border-2 border-secondary rounded-full text-secondary text-base font-medium duration-200 max-sm:text-center max-sm:mb-4 max-sm:py-0 md:py-0 md:mb-4 lg:py-2 lg:mb-0 md:text-center">
-                                            <img src="/assets/navbar/speed.svg" alt="Speed" className="w-4 h-4" />
+                                            <Image src="/assets/navbar/speed.svg" alt="Speed" className="w-4 h-4" width={16} height={16} />
                                             <span>Get Collate Free</span>
                                         </div>
                                     </ParamLink>

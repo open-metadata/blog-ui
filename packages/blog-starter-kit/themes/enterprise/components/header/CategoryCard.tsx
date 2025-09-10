@@ -1,5 +1,6 @@
 import React, { FC, SVGProps } from 'react'
 import ParamLink from '../ParamLink'
+import Image from 'next/image'
 
 interface LinksType {
     link: string,
@@ -20,7 +21,7 @@ const CategoryCard = ({ title, links }: { title: string, links: LinksType[] }) =
                         <div className="flex gap-3 items-start py-2 px-2 hover:bg-[#f8fbfc] hover:rounded-md">
                             <div className="flex-shrink-0 mt-1">
                                 {typeof icon === 'string' ? (
-                                    <img src={icon} alt={title} className="w-9 h-9" />
+                                    <Image src={icon} alt={title} className="w-9 h-9" width={36} height={36} />
                                 ) : (
                                     React.createElement(icon)
                                 )}

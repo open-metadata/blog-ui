@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PublicationFragment } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
 import ParamLink from './ParamLink';
@@ -21,13 +22,13 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 				className="flex flex-row items-center justify-center gap-3"
 			>
 				{PUBLICATION_LOGO ? (
-					<>
-						<img
-							className="block h-[32px] w-auto shrink-0 cursor-pointer"
-							alt={publication.title}
-							src="https://www.getcollate.io/images/logo.svg"
-						/>
-					</>
+					<Image
+						className="block h-[32px] w-auto shrink-0 cursor-pointer"
+						alt={publication.title}
+						src="https://www.getcollate.io/images/logo.svg"
+						width={100}
+						height={32}
+					/>
 				) : (
 					<span
 						className={`block text-2xl font-semibold ${
