@@ -96,7 +96,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 			triggerCustomWidgetEmbed(post.publication?.id.toString());
 			setCanLoadEmbeds(true);
 		})();
-	}, []);
+	}, [post]);
 
 	return (
 		<>

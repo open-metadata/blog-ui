@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import ResourceDropdownItem from './ResourceDropdownItem'
+import Image from 'next/image'
 
 const ResourceDropdown = ({ handleResourceClick }: { handleResourceClick: () => void }) => {
     const [isSmallScreen, setIsSmallScreen] = useState(false)
@@ -31,7 +32,7 @@ const ResourceDropdown = ({ handleResourceClick }: { handleResourceClick: () => 
                             Resources
                         </div>
                         <div className="inline-flex -rotate-90 h-full hover:bg-transparent justify-center w-8 items-center p-0 text-sm font-medium text-center text-heading lg:rotate-0 hover:bg-gray-100 focus:ring-gray-50">
-                            <img src="/assets/navbar/nav-right-icon.svg" alt="Arrow" className="w-4 h-4" />
+                            <Image src="/assets/navbar/nav-right-icon.svg" alt="Arrow" className="w-4 h-4" width={16}  height={16}/>
                         </div>
                     </button>
                     {!isSmallScreen && <ResourceDropdownItem />}

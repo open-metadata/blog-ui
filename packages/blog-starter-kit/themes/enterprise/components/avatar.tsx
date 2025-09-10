@@ -1,6 +1,7 @@
 import { resizeImage } from '@starter-kit/utils/image';
 import { DEFAULT_AVATAR } from '../utils/const';
 import ParamLink from './ParamLink';
+import Image from 'next/image';
 
 type Props = {
 	username: string;
@@ -21,10 +22,12 @@ export const Avatar = ({ username, name, picture, size }: Props) => {
 				}
 				target="_blank"
 			>
-				<img
+				<Image
 					className="block h-full w-full"
 					src={resizeImage(picture, { w: 160, h: 160, c: 'face' }, DEFAULT_AVATAR)}
 					alt={name}
+					width={160}
+					height={160}
 				/>
 			</ParamLink>
 			<div className="text-base font-bold text-[#181D27] dark:text-neutral-300">
