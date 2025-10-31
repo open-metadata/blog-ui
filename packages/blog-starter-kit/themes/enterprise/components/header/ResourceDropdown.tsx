@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react'
 import ResourceDropdownItem from './ResourceDropdownItem'
 import Image from 'next/image'
+import { ResourceDropdownType } from './Header.interface';
 
-const ResourceDropdown = ({ handleResourceClick }: { handleResourceClick: () => void }) => {
+interface ResourceDropdownProps {
+    handleResourceClick: () => void;
+    resourceData: ResourceDropdownType;
+}
+
+const ResourceDropdown = ({ handleResourceClick, resourceData }: ResourceDropdownProps) => {
     const [isSmallScreen, setIsSmallScreen] = useState(false)
 
     useEffect(() => {
@@ -29,13 +35,13 @@ const ResourceDropdown = ({ handleResourceClick }: { handleResourceClick: () => 
                         <div
                             className={`text-[16px] lg:text-[14px] xl:text-[16px] underline-offset-4 -tracking-[0.16px] font-medium duration-200 cursor-pointer text-heading`}
                         >
-                            Resources
+                            {resourceData?.title}
                         </div>
                         <div className="inline-flex -rotate-90 h-full hover:bg-transparent justify-center w-8 items-center p-0 text-sm font-medium text-center text-heading lg:rotate-0 hover:bg-gray-100 focus:ring-gray-50">
                             <Image src="/assets/navbar/nav-right-icon.svg" alt="Arrow" className="w-4 h-4" width={16}  height={16}/>
                         </div>
                     </button>
-                    {!isSmallScreen && <ResourceDropdownItem />}
+                    {!isSmallScreen && <ResourceDropdownItem resourceData={resourceData} />}
                 </div>
             </div>
         </div>

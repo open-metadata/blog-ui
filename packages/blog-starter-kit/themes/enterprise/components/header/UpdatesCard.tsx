@@ -1,22 +1,14 @@
 import ParamLink from '../ParamLink'
+import { ProductUpdate } from './Header.interface'
 
-interface UpdatesType {
-    version: string,
-    title: string,
-    date: string,
-    description: string,
-    link: string,
-    highlight: boolean,
-}
-
-const UpdatesCard = ({ updates }: { updates: UpdatesType[] }) => {
+const UpdatesCard = ({ updates }: { updates?: ProductUpdate[] }) => {
     return (
         <div>
             <div className="flex gap-2 items-center uppercase tracking-[0.04em] mb-6 text-[#5C6181]">
                 Updates
             </div>
             <div className="flex flex-col gap-4">
-                {updates.map((update: UpdatesType) => (
+                {updates?.map((update: ProductUpdate) => (
                     <ParamLink
                         href={update.link}
                         key={update.version}
@@ -75,6 +67,7 @@ const UpdatesCard = ({ updates }: { updates: UpdatesType[] }) => {
                 <ParamLink
                     href="https://www.getcollate.io/product-updates"
                     className="text-[#CD3C4D] text-sm font-medium hover:underline mt-2 flex items-center gap-1"
+                    target='_blank'
                 >
                     <span>View all releases</span>
                     <svg
