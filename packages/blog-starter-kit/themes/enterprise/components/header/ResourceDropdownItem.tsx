@@ -13,7 +13,7 @@ const ResourceDropdownItem = ({ resourceData }: { resourceData?: ResourceDropdow
 							{resourceData?.title}
 						</div>
 						{resourceData?.resourceItems?.map((item) => (
-							<div className="mb-6 mt-8 flex items-center gap-3">
+							<div className="mb-6 mt-8 flex items-center gap-3" key={item.title}>
 								<Image src={item.icon} alt={item.title} width={40} height={40} />
 								<ParamLink
 									name={item.title}
