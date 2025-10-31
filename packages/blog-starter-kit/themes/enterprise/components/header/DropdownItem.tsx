@@ -1,10 +1,15 @@
-import { FEATURE_LINKS, PRODUCT_LINKS, PRODUCT_UPDATES } from '../../constants/Navbar.constants'
 import CategoryCard from './CategoryCard'
+import { ProductDropdown } from './Header.interface';
 import UpdatesCard from './UpdatesCard'
 
-const DropdownItem = ({ handleCollateClick }: { handleCollateClick?: () => void }) => {
+interface DropdownItemProps {
+	handleCollateClick?: () => void;
+	productData?: ProductDropdown;
+}
+
+const DropdownItem = ({ handleCollateClick, productData }: DropdownItemProps) => {
     return (
-        <div className="overflow-y-auto max-h-[calc(100vh-100px)] touch-pan-y absolute z-10 dropdown-menu w-[95%] top-[50px] rounded-b-sm lg:rounded-b-2xl lg:w-[920px] lg:top-auto lg:-left-64 xl:-left-40 lg:hidden">
+        <div className="overflow-y-auto max-h-[calc(100vh-100px)] touch-pan-y absolute z-10 dropdown-menu w-[92%] sm:w-[95%] top-[50px] rounded-b-sm lg:rounded-b-2xl lg:w-[920px] lg:top-auto lg:-left-64 xl:-left-40 lg:hidden">
             <div className="h-[14px] w-full bg-transparent"></div>
             <div className="bg-white font-medium p-5 min-[480px]:p-8 border border-[#e8e8ea] border-t-0 rounded-b-sm lg:rounded-b-2xl">
                 <div className="flex gap-2 items-center tracking-[0.04em] text-lg font-bold mb-6 text-[#1D3439] lg:hidden">
@@ -26,33 +31,26 @@ const DropdownItem = ({ handleCollateClick }: { handleCollateClick?: () => void 
                             />
                         </svg>
                     </div>
-                    <div>Products</div>
+                    <div>{productData?.title}</div>
                 </div>
-                <div className="hidden lg:flex gap-6 mb-8">
-                    <div className="lg:border-r lg:border-[#E8E8EA] lg:flex lg:gap-6">
-                        <div className="flex-1 max-w-[280px]">
+                <div className="flex flex-col lg:flex-row gap-6 mb-8">
+                    <div className="grid gap-10 md:gap-16 md:grid-cols-2 lg:border-r lg:border-[#E8E8EA] lg:pr-2 lg:gap-6">
+                        <div className="lg:flex-1 lg:max-w-[280px]">
                             <CategoryCard
                                 title="Platform"
-                                links={PRODUCT_LINKS}
+                                links={productData?.productLinks}
                             />
                         </div>
-                        <div className="flex-1 max-w-[280px]">
+                        <div className="lg:flex-1 lg:max-w-[280px]">
                             <CategoryCard
                                 title="Features"
-                                links={FEATURE_LINKS}
+                                links={productData?.featureLinks}
                             />
                         </div>
                     </div>
-                    <div className="flex-1 max-w-[320px]">
-                        <UpdatesCard updates={PRODUCT_UPDATES} />
+                    <div className="border-t border-[#E8E8EA] pt-6 -mx-5 px-5 min-[480px]:-mx-8 min-[480px]:px-8 lg:border-none lg:pt-0 lg:mx-0 lg:px-0 lg:flex-1 lg:max-w-[320px]">
+                        <UpdatesCard updates={productData?.productUpdates} />
                     </div>
-                </div>
-                <div className="flex gap-10 md:gap-16 flex-col md:flex-row lg:hidden mb-8">
-                    <CategoryCard title="Platform" links={PRODUCT_LINKS} />
-                    <CategoryCard title="Features" links={FEATURE_LINKS} />
-                </div>
-                <div className="lg:hidden border-t border-[#E8E8EA] pt-6 -mx-5 px-5 min-[480px]:-mx-8 min-[480px]:px-8">
-                    <UpdatesCard updates={PRODUCT_UPDATES} />
                 </div>
             </div>
         </div>
