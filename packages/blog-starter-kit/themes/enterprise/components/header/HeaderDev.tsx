@@ -8,6 +8,7 @@ import DropdownItem from './DropdownItem';
 import ResourceDropdown from './ResourceDropdown';
 import ResourceDropdownItem from './ResourceDropdownItem';
 import { NavData } from './Header.interface';
+import { hrefLinks } from '../../utils/navbar';
 
 function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 	const [open, setOpen] = useState(false);
@@ -96,7 +97,10 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 					}  h-auto w-full gap-4 bg-white max-sm:w-full max-sm:drop-shadow-md md:w-full lg:flex lg:w-auto lg:items-center xl:gap-10`}
 				>
 					<Dropdown handleProductClick={handleProductClick} productData={navData?.productDropdown} />
-					{navData.navLinks.map(({ label, link }) => (
+					{navData.navLinks.map(({ label, link, site }) => {
+                        const { finalLink, target } = hrefLinks(link, site)
+                        
+                        return (
 						<div
 							key={label}
 							onClick={toggleHamburger}
@@ -104,21 +108,21 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 						>
 							<ParamLink
 								name={label}
-								href={link}
+								href={finalLink}
 								aria-label={label}
 								className={`cursor-pointer font-medium -tracking-[0.16px] duration-200 hover:text-[#007E99] lg:text-[14px] xl:text-[16px] ${
 									activeTab?.includes(link) ? 'text-[#007E99]' : 'text-[#2B4E56]'
 								}`}
-								target='_blank'
+								target={target}
 							/>
 						</div>
-					))}
+					)})}
 					<ResourceDropdown handleResourceClick={handleResourceClick} resourceData={navData?.resourceDropdown} />
 					<div className="relative">
 						<div className="mx-auto flex h-9 max-w-[217px] cursor-pointer items-center justify-center  rounded-full bg-white text-sm text-[#292E4E]">
 							<ParamLink
 								name={navData.contact.title}
-								href={navData.contact.link}
+								href={`https://www.getcollate.io${navData.contact.link}`}
                                 target='_blank'
 								className="cursor-pointer text-[16px] font-medium -tracking-[0.16px] text-[#CD3C4D] duration-200 lg:text-[14px] xl:text-[16px]"
 							/>

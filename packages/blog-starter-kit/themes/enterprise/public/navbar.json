@@ -2,11 +2,13 @@
 	"navLinks": [
 		{
 			"label": "Pricing",
-			"link": "https://www.getcollate.io/pricing"
+			"link": "/pricing",
+            "site": "main"
 		},
 		{
 			"label": "Blog",
-			"link": "https://blog.getcollate.io/"
+			"link": "/",
+            "site": "blog"
 		},
 		{
 			"label": "Docs",
@@ -17,19 +19,19 @@
 		"title": "Products",
 		"productLinks": [
 			{
-				"link": "https://www.getcollate.io/product",
+				"link": "/product",
 				"title": "Collate AI Platform",
 				"description": "AI-powered solution for all your data teams",
 				"icon": "/assets/navbar/collate-platform.svg"
 			},
 			{
-				"link": "https://www.getcollate.io/collate-ai",
+				"link": "/collate-ai",
 				"title": "Collate AI",
 				"description": "Natural Language, Agents, Automations",
 				"icon": "/assets/navbar/collate-ai.svg"
 			},
 			{
-				"link": "https://www.getcollate.io/comparison",
+				"link": "/comparison",
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
 				"icon": "/assets/navbar/collate-vs-oss.svg"
@@ -37,26 +39,26 @@
 		],
 		"featureLinks": [
 			{
-				"link": "https://www.getcollate.io/askcollate",
+				"link": "/askcollate",
 				"title": "AskCollate",
 				"description": "Faster data management and insights with conversational AI",
 				"icon": "/assets/navbar/askcollate.svg",
 				"isNew": true
 			},
 			{
-				"link": "https://www.getcollate.io/data-quality",
+				"link": "/data-quality",
 				"title": "Data Quality",
 				"description": "Complete quality solution for trusted data",
 				"icon": "/assets/navbar/data-quality.svg"
 			},
 			{
-				"link": "https://www.getcollate.io/data-observability",
+				"link": "/data-observability",
 				"title": "Data Observability",
 				"description": "Actionable visibility into pipelines & quality",
 				"icon": "/assets/navbar/data-observability.svg"
 			},
 			{
-				"link": "https://www.getcollate.io/data-governance",
+				"link": "/data-governance",
 				"title": "Data Governance",
 				"description": "Agentic trust & compliance built for scalability",
 				"icon": "/assets/navbar/data-governance.svg"
@@ -68,7 +70,7 @@
 				"title": "Release v1.10.0",
 				"date": "October 2025",
 				"description": "Google Drive Support, Impact Analysis & more fixes",
-				"link": "https://blog.getcollate.io/announcing-collate-110",
+				"link": "/announcing-collate-110",
 				"highlight": true
 			}
 		]
@@ -78,18 +80,21 @@
         "resourceItems": [
             {
                 "title": "Case Studies",
-                "link": "https://www.getcollate.io/case-studies",
-                "icon": "/assets/navbar/case-study-icon.svg"
+                "link": "/case-studies",
+                "icon": "/assets/navbar/case-study-icon.svg",
+                "site": "main"
             },
             {
                 "title": "Learning Center",
-                "link": "https://www.getcollate.io/learning-center",
-                "icon": "/assets/navbar/learning-center-icon.svg"
+                "link": "/learning-center",
+                "icon": "/assets/navbar/learning-center-icon.svg",
+                "site": "main"
             },
             {
                 "title": "Events",
-                "link": "https://www.getcollate.io/events",
-                "icon": "/assets/navbar/events-icon.svg"
+                "link": "/events",
+                "icon": "/assets/navbar/events-icon.svg",
+                "site": "main"
             }
         ],
         "resourceArticles": [
@@ -137,6 +142,6 @@
     },
     "contact": {
         "title": "Contact Us",
-        "link": "https://www.getcollate.io/contact-sales"
+        "link": "/contact-sales"
     }
 }

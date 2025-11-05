@@ -1,6 +1,7 @@
 interface NavLink {
 	label: string;
 	link: string;
+    site?: string;
 }
 
 export interface ProductLink {
@@ -34,6 +35,7 @@ interface ResourceItem {
 	title: string;
 	link: string;
 	icon: string;
+    site?: string;
 }
 
 interface ResourceArticle {

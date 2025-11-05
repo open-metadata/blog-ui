@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 
 interface ParamLinkProps {
   name?: string;
-  href: string;
+  href?: string;
   target?: string;
   className?: string;
   children?: React.ReactNode;
 }
 
-const ParamLink = ({ name, href, target = "_self", className, children }: ParamLinkProps) => {
+const ParamLink = ({ name, href = "", target = "_self", className, children }: ParamLinkProps) => {
   const [searchParams, setSearchParams] = useState('')
 
     useEffect(() => {

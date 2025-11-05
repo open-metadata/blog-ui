@@ -11,7 +11,7 @@ const CategoryCard = ({ title, links }: { title: string; links: ProductLink[] | 
 			</div>
 			<div className="flex flex-col gap-4 sm:gap-6">
 				{links?.map(({ link, title, description, icon }) => (
-					<ParamLink href={link} key={title} target="_blank">
+					<ParamLink href={`https://www.getcollate.io${link}`} key={title} target="_blank">
 						<div className="flex items-start gap-3 px-2 py-2 hover:rounded-md hover:bg-[#f8fbfc]">
 							<div className="mt-1 flex-shrink-0">
 								{typeof icon === 'string' ? (

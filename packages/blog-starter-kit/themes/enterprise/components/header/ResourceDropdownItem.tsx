@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ParamLink from '../ParamLink';
 import { ResourceDropdownType } from './Header.interface';
+import { hrefLinks } from '../../utils/navbar';
 
 const ResourceDropdownItem = ({ resourceData }: { resourceData?: ResourceDropdownType }) => {
 	return (
@@ -12,17 +13,20 @@ const ResourceDropdownItem = ({ resourceData }: { resourceData?: ResourceDropdow
 						<div className="text-lg font-medium uppercase tracking-[0.04em] text-[#5C6181]">
 							{resourceData?.title}
 						</div>
-						{resourceData?.resourceItems?.map((item) => (
+						{resourceData?.resourceItems?.map((item) => {
+                            const { finalLink, target } = hrefLinks(item.link, item.site)
+                            
+                            return (
 							<div className="mb-6 mt-8 flex items-center gap-3" key={item.title}>
 								<Image src={item.icon} alt={item.title} width={40} height={40} />
 								<ParamLink
 									name={item.title}
-									href={item.link}
-									target="_blank"
+									href={finalLink}
+									target={target}
 									className="font-medium text-[#292E4E] hover:underline md:text-[15px]"
 								/>
 							</div>
-						))}
+						)})}
 					</div>
 					<div className="box-border w-full bg-[#E8F2F4] p-5 md:col-span-5 md:p-8">
 						<div className="text-lg font-medium uppercase tracking-[0.04em] text-[#5C6181]">
