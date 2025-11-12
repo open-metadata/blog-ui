@@ -2,17 +2,16 @@
 	"navLinks": [
 		{
 			"label": "Pricing",
-			"link": "/pricing",
-            "site": "main"
+			"link": "/pricing"
 		},
 		{
 			"label": "Blog",
-			"link": "/",
-            "site": "blog"
+			"link": "/blog"
 		},
 		{
 			"label": "Docs",
-			"link": "https://docs.getcollate.io/"
+			"link": "https://docs.getcollate.io/",
+			"isExternal": true
 		}
 	],
 	"productDropdown": {
@@ -81,20 +80,17 @@
             {
                 "title": "Case Studies",
                 "link": "/case-studies",
-                "icon": "/assets/navbar/case-study-icon.svg",
-                "site": "main"
+                "icon": "/assets/navbar/case-study-icon.svg"
             },
             {
                 "title": "Learning Center",
                 "link": "/learning-center",
-                "icon": "/assets/navbar/learning-center-icon.svg",
-                "site": "main"
+                "icon": "/assets/navbar/learning-center-icon.svg"
             },
             {
                 "title": "Events",
                 "link": "/events",
-                "icon": "/assets/navbar/events-icon.svg",
-                "site": "main"
+                "icon": "/assets/navbar/events-icon.svg"
             }
         ],
         "resourceArticles": [

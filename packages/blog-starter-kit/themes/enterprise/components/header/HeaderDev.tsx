@@ -8,7 +8,6 @@ import DropdownItem from './DropdownItem';
 import ResourceDropdown from './ResourceDropdown';
 import ResourceDropdownItem from './ResourceDropdownItem';
 import { NavData } from './Header.interface';
-import { hrefLinks } from '../../utils/navbar';
 
 function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 	const [open, setOpen] = useState(false);
@@ -97,10 +96,7 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 					}  h-auto w-full gap-4 bg-white max-sm:w-full max-sm:drop-shadow-md md:w-full lg:flex lg:w-auto lg:items-center xl:gap-10`}
 				>
 					<Dropdown handleProductClick={handleProductClick} productData={navData?.productDropdown} />
-					{navData.navLinks.map(({ label, link, site }) => {
-                        const { finalLink, target } = hrefLinks(link, site)
-                        
-                        return (
+					{navData.navLinks.map(({ label, link }) => (
 						<div
 							key={label}
 							onClick={toggleHamburger}
@@ -108,15 +104,15 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 						>
 							<ParamLink
 								name={label}
-								href={finalLink}
+								href={link.includes("https") ? link : `https://www.getcollate.io${link}`}
 								aria-label={label}
 								className={`cursor-pointer font-medium -tracking-[0.16px] duration-200 hover:text-[#007E99] lg:text-[14px] xl:text-[16px] ${
 									activeTab?.includes(link) ? 'text-[#007E99]' : 'text-[#2B4E56]'
 								}`}
-								target={target}
+								target='_blank'
 							/>
 						</div>
-					)})}
+					))}
 					<ResourceDropdown handleResourceClick={handleResourceClick} resourceData={navData?.resourceDropdown} />
 					<div className="relative">
 						<div className="mx-auto flex h-9 max-w-[217px] cursor-pointer items-center justify-center  rounded-full bg-white text-sm text-[#292E4E]">
