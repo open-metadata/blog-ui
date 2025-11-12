@@ -12,7 +12,6 @@ const UpdatesCard = ({ updates }: { updates?: ProductUpdate[] }) => {
                     <ParamLink
                         href={update.link}
                         key={update.version}
-                        target="_blank"
                     >
                         <div
                             className={`p-4 rounded-lg border ${

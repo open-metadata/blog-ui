@@ -104,7 +104,7 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 						>
 							<ParamLink
 								name={label}
-								href={link}
+								href={link.includes("https") ? link : `https://www.getcollate.io${link}`}
 								aria-label={label}
 								className={`cursor-pointer font-medium -tracking-[0.16px] duration-200 hover:text-[#007E99] lg:text-[14px] xl:text-[16px] ${
 									activeTab?.includes(link) ? 'text-[#007E99]' : 'text-[#2B4E56]'
@@ -118,7 +118,7 @@ function HeaderDev({ activeTab }: { readonly activeTab?: string }) {
 						<div className="mx-auto flex h-9 max-w-[217px] cursor-pointer items-center justify-center  rounded-full bg-white text-sm text-[#292E4E]">
 							<ParamLink
 								name={navData.contact.title}
-								href={navData.contact.link}
+								href={`https://www.getcollate.io${navData.contact.link}`}
                                 target='_blank'
 								className="cursor-pointer text-[16px] font-medium -tracking-[0.16px] text-[#CD3C4D] duration-200 lg:text-[14px] xl:text-[16px]"
 							/>
