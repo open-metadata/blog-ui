@@ -17,7 +17,7 @@ const ResourceDropdownItem = ({ resourceData }: { resourceData?: ResourceDropdow
 								<Image src={item.icon} alt={item.title} width={40} height={40} />
 								<ParamLink
 									name={item.title}
-									href={item.link}
+									href={`https://www.getcollate.io${item.link}`}
 									target="_blank"
 									className="font-medium text-[#292E4E] hover:underline md:text-[15px]"
 								/>

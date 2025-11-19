@@ -18,6 +18,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 		<div className="relative">
 			<ParamLink
 				href="https://www.getcollate.io/"
+				target='_blank'
 				aria-label={`${publication.title} blog home page`}
 				className="flex flex-row items-center justify-center gap-3"
 			>
