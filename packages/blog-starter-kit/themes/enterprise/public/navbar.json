@@ -65,11 +65,11 @@
 		],
 		"productUpdates": [
 			{
-				"version": "v1.10.0",
-				"title": "Release v1.10.0",
-				"date": "October 2025",
-				"description": "Google Drive Support, Impact Analysis & more fixes",
-				"link": "/announcing-collate-110",
+				"version": "v1.11.0",
+				"title": "Release v1.11.0",
+				"date": "December 2025",
+				"description": "AskCollate, Collate SQL Studio, Collate Browser Extension & more fixes",
+				"link": "/announcing-collate-111",
 				"highlight": true
 			}
 		]
