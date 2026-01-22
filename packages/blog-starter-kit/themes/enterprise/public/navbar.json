@@ -110,8 +110,16 @@
                 "description": "Ensure trustworthy, accurate data for stakeholders",
                 "cluster": "Data Quality"
             },
-            {
+			{
                 "id": 2,
+                "title": "Mastering Data Lineage: Techniques, Use Cases, and Pro Tips",
+                "image": "/assets/navbar/banner/data-lineage.png",
+                "slug": "data-lineage",
+                "description": "Understand how data flows across your systems",
+                "cluster": "Data Lineage"
+            },
+            {
+                "id": 3,
                 "title": "5 Core Pillars of Data Observability and Evolution in the AI Age",
                 "image": "/assets/navbar/banner/data-observability.png",
                 "slug": "data-observability",
@@ -119,20 +127,20 @@
                 "cluster": "Data Observability"
             },
             {
-                "id": 3,
+                "id": 4,
                 "title": "Data Governance in 2025 - Challenges, Capabilities & Best Practices",
                 "image": "/assets/navbar/banner/data-governance.png",
                 "slug": "data-governance",
                 "description": "Reduce risk, ensure data compliance",
                 "cluster": "Data Governance"
             },
-            {
-                "id": 4,
-                "title": "Best Data Observability Platforms - Top 5 Options in 2025",
-                "image": "/assets/navbar/banner/observability-platform.png",
-                "slug": "data-observability-platforms",
-                "description": "Choose the right monitoring solution",
-                "cluster": "Data Observability"
+			{
+                "id": 5,
+                "title": "Data Management: Key Functions, Examples, Trends & Best Practices",
+                "image": "/assets/navbar/banner/data-management.png",
+                "slug": "data-management",
+                "description": "Organize, store, and maintain data effectively",
+                "cluster": "Data Management"
             }
         ]
     },
