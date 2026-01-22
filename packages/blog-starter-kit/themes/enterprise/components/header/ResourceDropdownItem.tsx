@@ -39,15 +39,6 @@ const ResourceDropdownItem = ({ resourceData }: { resourceData?: ResourceDropdow
 									<div className="mt-1 text-[14px] text-[#707590]">{item.description}</div>
 								</ParamLink>
 							))}
-							<div>
-								<ParamLink
-									href="https://www.getcollate.io/learning-center"
-									className="text-[18px] font-medium text-[#CD3C4D] hover:underline"
-                                    target='_blank'
-								>
-									<span>View all Articles {'>'} </span>
-								</ParamLink>
-							</div>
 						</div>
 					</div>
 				</div>
