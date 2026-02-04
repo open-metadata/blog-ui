@@ -72,6 +72,8 @@ export default function Index({ publication, initialAllPosts, initialPageInfo, t
 		loadMore(currentPage);
 	}, [currentPage]);
 
+	console.log(allPosts)
+
 	const firstPost = useMemo(() => allPosts[0], []);
 	const secondaryPosts = useMemo(() => allPosts.slice(1, 4).map((post) => {
 		return (
