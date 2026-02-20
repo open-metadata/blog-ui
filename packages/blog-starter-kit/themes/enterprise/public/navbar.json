@@ -34,34 +34,15 @@
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
 				"icon": "/assets/navbar/collate-vs-oss.svg"
-			},
+			}
+		],
+		"featureLinks": [
 			{
 				"link": "/askcollate",
 				"title": "AskCollate",
 				"description": "Faster data management and insights with conversational AI",
 				"icon": "/assets/navbar/askcollate.svg",
 				"isNew": true
-			},
-			{
-				"link": "/ai-studio-ai-sdk",
-				"title": "AI Studio & AI SDK",
-				"description": "No-code studio and SDKs for intelligent agents",
-				"icon": "/assets/navbar/ai-studio.svg",
-				"isNew": true
-			}
-		],
-		"featureLinks": [
-			{
-				"link": "/data-discovery",
-				"title": "Data Discovery",
-				"description": "Intelligent self-service beyond data catalogs",
-				"icon": "/assets/navbar/data-discovery.svg"
-			},
-			{
-				"link": "/data-lineage",
-				"title": "Data Lineage",
-				"description": "End-to-end visibility into your data's journey",
-				"icon": "/assets/navbar/data-lineage.svg"
 			},
 			{
 				"link": "/data-quality",
