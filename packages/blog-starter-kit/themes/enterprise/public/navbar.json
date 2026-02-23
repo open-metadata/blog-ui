@@ -36,12 +36,6 @@
 				"icon": "/assets/navbar/askcollate.svg"
 			},
 			{
-				"link": "/ai-studio-ai-sdk",
-				"title": "AI Studio & AI SDK",
-				"description": "No-code studio and SDKs for intelligent agents",
-				"icon": "/assets/navbar/ai-studio.svg"
-			},
-			{
 				"link": "/comparison",
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
