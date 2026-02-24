@@ -36,6 +36,12 @@
 				"icon": "/assets/navbar/askcollate.svg"
 			},
 			{
+                "link": "/ai-studio-ai-sdk",
+                "title": "AI Studio & AI SDK",
+                "description": "No-code studio and SDKs for intelligent agents",
+                "icon": "/assets/navbar/ai-studio.svg"
+            },
+			{
 				"link": "/comparison",
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
@@ -76,13 +82,13 @@
 		],
 		"productUpdates": [
 			{
-				"version": "v1.11.0",
-				"title": "Release v1.11.0",
-				"date": "December 2025",
-				"description": "AskCollate, Collate SQL Studio, Custom Governance Workflow Builder & more",
-				"link": "/announcing-collate-111",
-				"highlight": true
-			}
+                "version": "v1.12.0",
+                "title": "Release v1.12.0",
+                "date": "February 2026",
+                "description": "AI Studio, AI SDK, Custom Auto Classification, Data Quality Test Library  & more",
+                "link": "/announcing-collate-112",
+                "highlight": true
+            }
 		]
 	},
     "resourceDropdown": {
