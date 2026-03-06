@@ -158,6 +158,22 @@
                 "slug": "data-management",
                 "description": "Organize, store, and maintain data effectively",
                 "cluster": "Data Management"
+            },
+            {
+                "id": 6,
+                "title": "Data Mesh: Architecture, Capabilities, and Best Practices",
+                "image": "/assets/navbar/banner/data-mesh.png",
+                "slug": "data-mesh",
+                "description": "Scale data access with decentralized, domain-driven ownership",
+                "cluster": "Data Mesh"
+            },
+            {
+                "id": 7,
+                "title": "Metadata Management in 2026: Processes, Use Cases, and Technologies",
+                "image": "/assets/navbar/banner/metadata-management.png",
+                "slug": "metadata-management",
+                "description": "Enrich data context, discoverability, and governance",
+                "cluster": "Metadata Management"
             }
         ]
     },
