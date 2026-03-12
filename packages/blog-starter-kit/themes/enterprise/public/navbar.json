@@ -113,7 +113,7 @@
         "resourceArticles": [
             {
                 "id": 0,
-                "title": "Data Catalog: How It Works, Key Challenges & How AI Can Help",
+                "title": "Data Catalog",
                 "image": "/assets/navbar/banner/data-catalog.png",
                 "slug": "data-catalog",
                 "description": "Finding and accessing data is changing",
@@ -121,7 +121,7 @@
             },
             {
                 "id": 1,
-                "title": "Data Quality Dimensions & Building Your Data Quality Framework [2025]",
+                "title": "Data Quality",
                 "image": "/assets/navbar/banner/data-quality.png",
                 "slug": "data-quality",
                 "description": "Ensure trustworthy, accurate data for stakeholders",
@@ -129,7 +129,7 @@
             },
 			{
                 "id": 2,
-                "title": "Mastering Data Lineage: Techniques, Use Cases, and Pro Tips",
+                "title": "Data Lineage",
                 "image": "/assets/navbar/banner/data-lineage.png",
                 "slug": "data-lineage",
                 "description": "Understand how data flows across your systems",
@@ -137,7 +137,7 @@
             },
             {
                 "id": 3,
-                "title": "5 Core Pillars of Data Observability and Evolution in the AI Age",
+                "title": "Data Observability",
                 "image": "/assets/navbar/banner/data-observability.png",
                 "slug": "data-observability",
                 "description": "Improve data reliability and performance",
@@ -145,7 +145,7 @@
             },
             {
                 "id": 4,
-                "title": "Data Governance in 2025 - Challenges, Capabilities & Best Practices",
+                "title": "Data Governance",
                 "image": "/assets/navbar/banner/data-governance.png",
                 "slug": "data-governance",
                 "description": "Reduce risk, ensure data compliance",
@@ -153,7 +153,7 @@
             },
 			{
                 "id": 5,
-                "title": "Data Management: Key Functions, Examples, Trends & Best Practices",
+                "title": "Data Management",
                 "image": "/assets/navbar/banner/data-management.png",
                 "slug": "data-management",
                 "description": "Organize, store, and maintain data effectively",
@@ -161,7 +161,7 @@
             },
             {
                 "id": 6,
-                "title": "Data Mesh: Architecture, Capabilities, and Best Practices",
+                "title": "Data Mesh",
                 "image": "/assets/navbar/banner/data-mesh.png",
                 "slug": "data-mesh",
                 "description": "Scale data access with decentralized, domain-driven ownership",
@@ -169,7 +169,7 @@
             },
             {
                 "id": 7,
-                "title": "Metadata Management in 2026: Processes, Use Cases, and Technologies",
+                "title": "Metadata Management",
                 "image": "/assets/navbar/banner/metadata-management.png",
                 "slug": "metadata-management",
                 "description": "Enrich data context, discoverability, and governance",
