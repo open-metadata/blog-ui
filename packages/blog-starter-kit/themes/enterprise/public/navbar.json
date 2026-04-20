@@ -42,10 +42,10 @@
                 "icon": "/assets/navbar/ai-studio.svg"
             },
 			{
-				"link": "/collate-ai-analytics",
+				"link": "/ai-analytics",
 				"title": "Collate AI Analytics",
 				"description": "Your AI data analyst for governed exploratory analytics",
-				"icon": "/assets/navbar/collate-ai-analytics.svg"
+				"icon": "/assets/navbar/ai-analytics.svg"
 			},
 			{
 				"link": "/comparison",
