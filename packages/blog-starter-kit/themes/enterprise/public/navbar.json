@@ -43,7 +43,7 @@
             },
 			{
 				"link": "/ai-analytics",
-				"title": "Collate AI Analytics",
+				"title": "AI Analytics",
 				"description": "Your AI data analyst for governed exploratory analytics",
 				"icon": "/assets/navbar/ai-analytics.svg"
 			},
