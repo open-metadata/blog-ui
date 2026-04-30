@@ -42,6 +42,12 @@
                 "icon": "/assets/navbar/ai-studio.svg"
             },
 			{
+				"link": "/ai-analytics",
+				"title": "AI Analytics",
+				"description": "Your AI data analyst for governed exploratory analytics",
+				"icon": "/assets/navbar/ai-analytics.svg"
+			},
+			{
 				"link": "/comparison",
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
