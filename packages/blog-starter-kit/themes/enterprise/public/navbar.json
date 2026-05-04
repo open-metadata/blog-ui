@@ -42,6 +42,12 @@
                 "icon": "/assets/navbar/ai-studio.svg"
             },
 			{
+				"link": "/ai-analytics",
+				"title": "AI Analytics",
+				"description": "Your AI data analyst for governed exploratory analytics",
+				"icon": "/assets/navbar/ai-analytics.svg"
+			},
+			{
 				"link": "/comparison",
 				"title": "Collate vs OSS OpenMetadata",
 				"description": "Managed service from the original creators",
@@ -82,11 +88,11 @@
 		],
 		"productUpdates": [
 			{
-                "version": "v1.12.0",
-                "title": "Release v1.12.0",
-                "date": "February 2026",
-                "description": "AI Studio, AI SDK, Custom Auto Classification, Data Quality Test Library  & more",
-                "link": "/announcing-collate-1-12",
+                "version": "v1.13.0",
+                "title": "Release v1.13.0",
+                "date": "May 2026",
+                "description": "Collate AI Analytics, Knowledge Graph, Ontology Explorer, Hybrid Search & more",
+                "link": "/announcing-collate-1-13",
                 "highlight": true
             }
 		]
