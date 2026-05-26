@@ -95,7 +95,14 @@
                 "link": "/announcing-collate-1-13",
                 "highlight": true
             }
-		]
+		],
+        "semanticExplainer": {
+            "image": "/assets/navbar/nav-graphic.webp",
+            "highlight": true,
+            "title": "See what's new in semantic intelligence — built for AI that gets it right.",
+            "linkText": "Read the explainer",
+            "link": "/what-is-a-semantic-context-layer"
+        }
 	},
     "resourceDropdown": {
         "title": "Resources",
