@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Redirecting...</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #fff;
+        color: #333;
+      }
+      p {
+        font-size: 16px;
+      }
+      a {
+        color: #5f5af6;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Redirecting to
+      <a id="link" href="https://getcollate.io/blog">getcollate.io/blog</a>...
+    </p>
+    <script>
+      var slug = window.location.pathname.replace(/^\//, "");
+      var destination = "https://getcollate.io/blog" + (slug ? "/" + slug : "") + window.location.search + window.location.hash;
+      document.getElementById("link").href = destination;
+      window.location.replace(destination);
+    </script>
+  </body>
+</html>
